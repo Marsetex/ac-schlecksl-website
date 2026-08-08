@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import AppFooter from '@/components/layout/AppFooter.vue'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 import img1978 from '@/assets/history/1978-anfaenge.jpg'
 import img1979 from '@/assets/history/1979-gruendung.jpg'
@@ -76,10 +77,10 @@ const events: TimelineEvent[] = [
 </script>
 
 <template>
-  <div class="bg-chalk min-h-screen font-sans">
+  <div class="bg-chalk flex min-h-screen flex-col font-sans">
     <NavigationBar />
 
-    <main class="mx-auto max-w-4xl px-6 pt-28 pb-24 sm:px-8">
+    <main class="mx-auto w-full max-w-4xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <header class="mb-16 text-center">
         <p class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.2em] uppercase">
           Es war einmal...
@@ -123,5 +124,7 @@ const events: TimelineEvent[] = [
         </ol>
       </div>
     </main>
+
+    <AppFooter />
   </div>
 </template>

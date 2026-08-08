@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import AppFooter from '@/components/layout/AppFooter.vue'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 import imgKeschteCup2016 from '@/assets/news/keschte-cup-2016.jpg'
 import imgMuenchhausen2014 from '@/assets/news/muenchhausen-2014.jpg'
@@ -147,10 +148,10 @@ const newsItems: NewsItem[] = [
 </script>
 
 <template>
-  <div class="bg-chalk min-h-screen font-sans">
+  <div class="bg-chalk flex min-h-screen flex-col font-sans">
     <NavigationBar />
 
-    <main class="mx-auto max-w-3xl px-6 pt-28 pb-24 sm:px-8">
+    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">News</h1>
 
       <div class="mt-10 space-y-12">
@@ -239,5 +240,7 @@ const newsItems: NewsItem[] = [
         </article>
       </div>
     </main>
+
+    <AppFooter />
   </div>
 </template>

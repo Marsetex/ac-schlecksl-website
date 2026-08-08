@@ -1,12 +1,13 @@
 <script lang="ts" setup>
+import AppFooter from '@/components/layout/AppFooter.vue'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 </script>
 
 <template>
-  <div class="bg-chalk min-h-screen font-sans">
+  <div class="bg-chalk flex min-h-screen flex-col font-sans">
     <NavigationBar />
 
-    <main class="mx-auto max-w-3xl px-6 pt-28 pb-24 sm:px-8">
+    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <header class="mb-12 text-center">
         <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">
           Bildergalerie
@@ -16,5 +17,7 @@ import NavigationBar from '@/components/layout/NavigationBar.vue'
         </p>
       </header>
     </main>
+
+    <AppFooter />
   </div>
 </template>

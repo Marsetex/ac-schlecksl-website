@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import AppFooter from '@/components/layout/AppFooter.vue'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 import img2009 from '@/assets/matches/2009.jpg'
 import img2008 from '@/assets/matches/2008.jpg'
@@ -53,10 +54,10 @@ const years: YearSummary[] = [
 </script>
 
 <template>
-  <div class="bg-chalk min-h-screen font-sans">
+  <div class="bg-chalk flex min-h-screen flex-col font-sans">
     <NavigationBar />
 
-    <main class="mx-auto max-w-3xl px-6 pt-28 pb-24 sm:px-8">
+    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Spiele</h1>
 
       <div class="mt-10 space-y-10">
@@ -78,5 +79,7 @@ const years: YearSummary[] = [
         </article>
       </div>
     </main>
+
+    <AppFooter />
   </div>
 </template>

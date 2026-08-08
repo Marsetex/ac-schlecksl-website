@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import AppFooter from '@/components/layout/AppFooter.vue'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 
 const tournaments: string[] = ['Badenia Cup Pretzschendorf: 11. Platz']
@@ -15,10 +16,10 @@ const games: string[] = [
 </script>
 
 <template>
-  <div class="bg-chalk min-h-screen font-sans">
+  <div class="bg-chalk flex min-h-screen flex-col font-sans">
     <NavigationBar />
 
-    <main class="mx-auto max-w-3xl px-6 pt-28 pb-24 sm:px-8">
+    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Ergebnisse 2007</h1>
       <p class="font-body text-pitch-dark/80 mt-4 text-[15px] leading-relaxed">
         7 Großfeldspiele: davon 5 Siege 2 Niederlagen
@@ -50,5 +51,7 @@ const games: string[] = [
         </li>
       </ul>
     </main>
+
+    <AppFooter />
   </div>
 </template>
