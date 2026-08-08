@@ -1,10 +1,5 @@
-<script setup lang="ts">
-import ClubLanding from './pages/LandingPage.vue'
-</script>
-
 <template>
-  <ClubLanding> </ClubLanding>
-  <!-- <ClubLandingOld></ClubLandingOld> -->
+  <RouterView />
 </template>
 
 <style scoped></style>
