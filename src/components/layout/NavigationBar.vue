@@ -15,21 +15,22 @@ interface NavItem {
 
 const nav: NavItem[] = [
   { label: 'Home', to: '/' },
-  { label: 'News', to: '/news' },
-  {
-    label: 'Es war einmal',
-    children: [
-      { label: 'Historie', to: '/historie' },
-      { label: 'Spiele', to: '/spiele' },
-      { label: 'Galerie', to: '/galerie' },
-    ],
-  },
+  { label: 'Aktuelles', to: '/news' },
   {
     label: 'Verein',
     children: [
       { label: 'Vorstand', to: '/vorstand' },
       { label: 'Training', to: '/training' },
       { label: 'Mannschaft', to: '/mannschaft' },
+      { label: 'Mitgliedschaft', to: '/mitgliedschaft' },
+    ],
+  },
+  {
+    label: 'Es war einmal',
+    children: [
+      { label: 'Historie', to: '/historie' },
+      { label: 'Spiele', to: '/spiele' },
+      { label: 'Galerie', to: '/galerie' },
     ],
   },
 ]

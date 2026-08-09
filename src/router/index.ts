@@ -6,6 +6,7 @@ import HistoryPage from '@/pages/HistoryPage.vue'
 import ImprintPage from '@/pages/ImprintPage.vue'
 import ClubLanding from '@/pages/LandingPage.vue'
 import MatchesOverviewPage from '@/pages/matches/MatchesOverviewPage.vue'
+import MembershipPage from '@/pages/MembershipPage.vue'
 import NewsPage from '@/pages/NewsPage.vue'
 import PrivacyPage from '@/pages/PrivacyPage.vue'
 import TeamPage from '@/pages/TeamPage.vue'
@@ -21,6 +22,7 @@ const router = createRouter({
     { path: '/vorstand', name: 'vorstand', component: BoardPage },
     { path: '/training', name: 'training', component: TrainingPage },
     { path: '/mannschaft', name: 'mannschaft', component: TeamPage },
+    { path: '/mitgliedschaft', name: 'mitgliedschaft', component: MembershipPage },
     { path: '/termine', name: 'termine', component: EventsPage },
     { path: '/galerie', name: 'galerie', component: GalleryPage },
     { path: '/datenschutz', name: 'datenschutz', component: PrivacyPage },
