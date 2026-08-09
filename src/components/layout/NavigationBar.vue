@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import logo from '@/assets/vereinslogo.png'
 
 interface NavLink {
   label: string
@@ -20,6 +21,7 @@ const nav: NavItem[] = [
     children: [
       { label: 'Historie', to: '/historie' },
       { label: 'Spiele', to: '/spiele' },
+      { label: 'Galerie', to: '/galerie' },
     ],
   },
   {
@@ -51,96 +53,114 @@ function toggleMobileSubmenu(label: string) {
 </script>
 
 <template>
-  <header
-    class="bg-linear-to-r from-accent to-accent-dark fixed inset-x-0 top-0 z-20 shadow-[0_1px_8px_rgba(0,0,0,0.35)]"
-  >
-    <div class="flex h-16 items-center gap-8 px-8">
-      <RouterLink
-        to="/"
-        class="mr-auto text-lg font-bold tracking-wide text-white"
-        @click="closeMobileMenu"
-      >
-        AC Schlecksl
-      </RouterLink>
-
-      <!-- Desktop-Menü -->
-      <nav class="hidden h-full items-center gap-8 md:flex">
-        <template v-for="item in nav" :key="item.label">
-          <RouterLink
-            v-if="item.to"
-            :to="item.to"
-            class="text-[15px] font-medium text-white/90 transition-colors hover:text-white"
-          >
-            {{ item.label }}
-          </RouterLink>
-
-          <div v-else class="group flex h-full items-center">
-            <button
-              type="button"
-              class="flex items-center gap-1 text-[15px] font-medium text-white/90 transition-colors hover:text-white"
+  <header class="fixed inset-x-0 top-0 z-20 shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
+    <div class="h-7 bg-black" aria-hidden="true"></div>
+    <div class="bg-oxford-blue h-15">
+      <div class="relative mx-auto flex h-full w-full max-w-3xl items-center gap-8 px-6 sm:px-8">
+        <!-- Desktop-Menü -->
+        <nav class="hidden h-full items-center gap-8 md:flex">
+          <template v-for="item in nav" :key="item.label">
+            <RouterLink
+              v-if="item.to"
+              :to="item.to"
+              class="text-[19px] font-extrabold text-white/90 transition-colors hover:text-white"
             >
               {{ item.label }}
-              <svg
-                viewBox="0 0 12 8"
-                class="h-2.5 w-2.5 fill-current transition-transform group-hover:-rotate-180"
-              >
-                <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" />
-              </svg>
-            </button>
+            </RouterLink>
 
-            <div
-              class="invisible absolute top-16 min-w-44 -translate-x-4 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100"
-            >
-              <div class="bg-accent-dark flex flex-col overflow-hidden rounded-b-md shadow-lg">
-                <RouterLink
-                  v-for="child in item.children"
-                  :key="child.label"
-                  :to="child.to"
-                  class="px-4 py-2.5 text-[14px] font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+            <div v-else class="group flex h-full items-center">
+              <button
+                type="button"
+                class="flex items-center gap-1 text-[19px] font-extrabold text-white/90 transition-colors hover:text-white"
+              >
+                {{ item.label }}
+                <svg
+                  viewBox="0 0 12 8"
+                  class="h-2.5 w-2.5 fill-current transition-transform group-hover:-rotate-180"
                 >
-                  {{ child.label }}
-                </RouterLink>
+                  <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" />
+                </svg>
+              </button>
+
+              <div
+                class="invisible fixed inset-x-0 top-22 opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100"
+              >
+                <div class="bg-yale-blue">
+                  <div class="mx-auto flex max-w-3xl items-center gap-8 px-6 py-3 sm:px-8">
+                    <RouterLink
+                      v-for="child in item.children"
+                      :key="child.label"
+                      :to="child.to"
+                      class="text-[14px] font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
+                    >
+                      {{ child.label }}
+                    </RouterLink>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </template>
-      </nav>
+          </template>
+        </nav>
 
-      <!-- Burger-Button -->
-      <button
-        type="button"
-        class="text-white md:hidden"
-        :aria-expanded="mobileMenuOpen"
-        aria-label="Menü öffnen"
-        @click="toggleMobileMenu"
-      >
-        <svg
-          v-if="!mobileMenuOpen"
-          viewBox="0 0 24 24"
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+        <!-- Burger-Button -->
+        <button
+          type="button"
+          class="ml-auto text-white md:hidden"
+          :aria-expanded="mobileMenuOpen"
+          aria-label="Menü öffnen"
+          @click="toggleMobileMenu"
         >
-          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg v-else viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
-        </svg>
-      </button>
+          <svg
+            v-if="!mobileMenuOpen"
+            viewBox="0 0 24 24"
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            v-else
+            viewBox="0 0 24 24"
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Vereinslogo: ragt über schwarzen Streifen und blaue Leiste, links neben dem ersten Menüpunkt -->
+    <div
+      class="pointer-events-none absolute inset-0 mx-auto flex w-full max-w-3xl items-start px-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <RouterLink to="/" class="pointer-events-auto shrink-0 md:-ml-40" @click="closeMobileMenu">
+        <img
+          :src="logo"
+          alt="AC Schlecksl Vereinslogo"
+          width="140"
+          height="140"
+          class="rounded-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+        />
+      </RouterLink>
     </div>
 
     <!-- Mobile-Menü -->
     <div
       v-if="mobileMenuOpen"
-      class="bg-accent-dark max-h-[calc(100vh-4rem)] overflow-y-auto px-6 pb-4 md:hidden"
+      class="bg-accent-dark max-h-[calc(100vh-5.5rem)] overflow-y-auto px-6 pb-4 md:hidden"
     >
       <nav class="flex flex-col">
         <template v-for="item in nav" :key="item.label">
           <RouterLink
             v-if="item.to"
             :to="item.to"
-            class="border-b border-white/10 py-3 text-[15px] font-medium text-white/90"
+            class="border-b border-white/10 py-3 text-[19px] font-extrabold text-white/90"
             @click="closeMobileMenu"
           >
             {{ item.label }}
@@ -149,7 +169,7 @@ function toggleMobileSubmenu(label: string) {
           <div v-else class="border-b border-white/10">
             <button
               type="button"
-              class="flex w-full items-center justify-between py-3 text-[15px] font-medium text-white/90"
+              class="flex w-full items-center justify-between py-3 text-[19px] font-extrabold text-white/90"
               @click="toggleMobileSubmenu(item.label)"
             >
               {{ item.label }}

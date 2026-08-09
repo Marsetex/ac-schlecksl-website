@@ -14,7 +14,7 @@ const actions = [
     <NavigationBar />
 
     <!-- Hero: volle Hoehe/Breite, kein Scrollen -->
-    <main class="absolute inset-x-0 top-16 bottom-0 overflow-hidden">
+    <main class="absolute inset-x-0 top-22 bottom-0 overflow-hidden">
       <img
         :src="heroImage"
         alt="AC Schlecksl Mannschaft auf dem Spielfeld"
