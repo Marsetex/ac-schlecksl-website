@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import heroImage from '@/assets/team-photo.jpg'
+import heroImage from '@/assets/landing-page-background.webp'
 import NavigationBar from '@/components/layout/NavigationBar.vue'
 import { upcomingEvents } from '@/data/upcomingEvents'
 

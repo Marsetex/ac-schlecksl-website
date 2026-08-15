@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import logo from '@/assets/vereinslogo.png'
+import logo from '@/assets/ac-schlecksl-logo.webp'
 
 interface NavLink {
   label: string
@@ -16,13 +16,13 @@ interface NavItem {
 const nav: NavItem[] = [
   { label: 'Home', to: '/' },
   { label: 'Aktuelles', to: '/news' },
+  { label: 'Mitgliedschaft', to: '/mitgliedschaft' },
   {
     label: 'Verein',
     children: [
       { label: 'Vorstand', to: '/vorstand' },
       { label: 'Training', to: '/training' },
       { label: 'Mannschaft', to: '/mannschaft' },
-      { label: 'Mitgliedschaft', to: '/mitgliedschaft' },
     ],
   },
   {
