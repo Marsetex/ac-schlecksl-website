@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 import { upcomingEvents } from '@/data/upcomingEvents'
 import imgKeschteCup2016 from '@/assets/news/keschte-cup-2016.jpg'
 import imgMuenchhausen2014 from '@/assets/news/muenchhausen-2014.jpg'

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import heroImage from '@/assets/landing-page-background.webp'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 import { upcomingEvents } from '@/data/upcomingEvents'
 
 const trainingMonth = new Date().getMonth() + 1

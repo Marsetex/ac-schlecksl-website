@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 </script>
 
 <template>

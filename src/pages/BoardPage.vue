@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 
 interface BoardMember {
   role: string
@@ -44,7 +44,7 @@ const teamLeaders: BoardMember[] = [
     <NavigationBar />
 
     <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <header class="mb-12 text-center">
+      <header class="mb-12">
         <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Vorstand</h1>
         <p class="font-body text-pitch-dark/80 mt-3 text-[15px] leading-relaxed">
           Eure Ansprechpartner in allen Fragen rund um den AC Schlecksl
