@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 </script>
 
@@ -9,15 +9,13 @@ import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 
     <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
       <header class="mb-12">
-        <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">
-          Mannschaft
-        </h1>
+        <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Mannschaft</h1>
         <p class="font-body text-pitch-dark/80 mt-3 text-[15px] leading-relaxed">
           Diese Seite befindet sich im Aufbau.
         </p>
       </header>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 import { upcomingEvents } from '@/data/upcomingEvents'
 import imgKeschteCup2016 from '@/assets/news/keschte-cup-2016.jpg'
@@ -227,6 +227,6 @@ const newsItems: NewsItem[] = [
       </div>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>

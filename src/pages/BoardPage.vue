@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 
 interface BoardMember {
@@ -57,7 +57,9 @@ const teamLeaders: BoardMember[] = [
           :key="member.role + member.name"
           class="rounded-lg bg-white/70 p-6 shadow-sm"
         >
-          <p class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.15em] uppercase">
+          <p
+            class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.15em] uppercase"
+          >
             {{ member.role }}
           </p>
           <h2 class="font-display text-pitch-dark mt-2 text-xl font-bold">{{ member.name }}</h2>
@@ -97,6 +99,6 @@ const teamLeaders: BoardMember[] = [
       </section>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>

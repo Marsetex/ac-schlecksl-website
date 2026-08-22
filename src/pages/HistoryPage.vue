@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 import img1978 from '@/assets/history/1978-anfaenge.jpg'
 import img1979 from '@/assets/history/1979-gruendung.jpg'
@@ -92,7 +92,9 @@ const events: TimelineEvent[] = [
 
       <div class="relative">
         <!-- Zeitstrahl -->
-        <div class="bg-club-blue/20 absolute inset-y-0 left-4 w-0.5 md:left-1/2 md:-translate-x-1/2"></div>
+        <div
+          class="bg-club-blue/20 absolute inset-y-0 left-4 w-0.5 md:left-1/2 md:-translate-x-1/2"
+        ></div>
 
         <ol class="flex flex-col gap-12 md:gap-16">
           <li
@@ -125,6 +127,6 @@ const events: TimelineEvent[] = [
       </div>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>

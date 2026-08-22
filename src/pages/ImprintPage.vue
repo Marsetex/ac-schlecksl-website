@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 
 interface Contact {
@@ -72,7 +72,9 @@ const liabilitySections: LiabilitySection[] = [
           :key="contact.heading"
           class="rounded-lg bg-white/70 p-6 shadow-sm"
         >
-          <p class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.15em] uppercase">
+          <p
+            class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.15em] uppercase"
+          >
             {{ contact.heading }}
           </p>
           <h2 class="font-display text-pitch-dark mt-2 text-xl font-bold">{{ contact.name }}</h2>
@@ -83,10 +85,16 @@ const liabilitySections: LiabilitySection[] = [
           >
             {{ line }}
           </p>
-          <p v-if="contact.fon" class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed">
+          <p
+            v-if="contact.fon"
+            class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed"
+          >
             Fon: {{ contact.fon }}
           </p>
-          <p v-if="contact.fax" class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed">
+          <p
+            v-if="contact.fax"
+            class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed"
+          >
             Fax: {{ contact.fax }}
           </p>
           <a
@@ -114,6 +122,6 @@ const liabilitySections: LiabilitySection[] = [
       </section>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/Footer/AppFooter.vue'
+import FooterMain from '@/components/layout/Footer/FooterMain.vue'
 import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
 </script>
 
@@ -18,6 +18,6 @@ import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
       </header>
     </main>
 
-    <AppFooter />
+    <FooterMain />
   </div>
 </template>
