@@ -11,7 +11,7 @@ defineProps<Props>()
 
 <template>
   <div>
-    <p class="font-display text-sm font-semibold tracking-wide text-white uppercase">
+    <p class="text-sm font-semibold tracking-wide text-white uppercase">
       {{ title }}
     </p>
     <nav class="mt-4 flex flex-col gap-2">

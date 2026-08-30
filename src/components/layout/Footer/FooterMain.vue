@@ -9,7 +9,7 @@ const year = new Date().getFullYear()
 
 <template>
   <div>
-    <div class="bg-accent-dark font-sans">
+    <div class="bg-yale-blue">
       <div class="mx-auto max-w-5xl px-6 py-10 sm:px-8">
         <div class="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <FooterBrand />
