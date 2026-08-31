@@ -43,9 +43,15 @@ components in `src/pages/`. Route **paths are German** (`/spiele`, `/mannschaft`
 `/mitgliedschaft`, `/termine`, `/galerie`, `/fotos`, `/datenschutz`, `/impressum`, ...) while
 **page component filenames are English** (`MatchesPage.vue`, `TeamPage.vue`, `EventsPage.vue`,
 `PrivacyPage.vue`, `ImprintPage.vue`, ...) — keep that split when adding a route.
-`src/pages/matches/MatchesPageYYYY.vue` (one file per historical season, 2005–2011) exist but are
-**not currently wired into the router** — they're orphaned leftovers from the original scaffold,
-not linked from `MatchesPage.vue` or anywhere else. Don't assume they're reachable.
+Per-season match results are consolidated into a single dynamic route, `/spiele/:year` →
+`MatchesYearPage.vue`, rather than one page component per season. `MatchesYearPage.vue` reads
+`route.params.year`, looks it up in `matchYears` (`src/data/matches-years.data.ts`, typed via
+`src/models/matches/`), and hands the resolved `MatchYear` down as a prop to the presentational
+`src/components/matches/MatchesYearDetail.vue` — the same "page resolves data, dumb component
+renders it" split used by `PhotosPage.vue`/`PhotoGallery`. `MatchesPage.vue` (`/spiele`, the year
+overview) only links a year's card to `/spiele/:year` when that year has an entry in
+`matchYears`; add new seasons by adding a `MatchYear` entry to the data file, not a new page or
+route.
 
 There are two page-shell layout components, both in `src/components/layout/`:
 

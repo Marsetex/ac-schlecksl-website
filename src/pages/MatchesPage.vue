@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
+import { matchYears } from '@/data/matches-years.data'
 import img2009 from '@/assets/matches/2009.jpg'
 import img2008 from '@/assets/matches/2008.jpg'
 import img2007 from '@/assets/matches/2007.jpg'
@@ -70,6 +71,12 @@ const years: YearSummary[] = [
 
 function turnierWord(count: number): string {
   return count === 1 ? 'Turnier' : 'Turniere'
+}
+
+const yearsWithDetail = new Set(matchYears.map((entry) => entry.year))
+
+function hasDetail(year: string): boolean {
+  return yearsWithDetail.has(year)
 }
 </script>
 
@@ -204,6 +211,15 @@ function turnierWord(count: number): string {
               </div>
             </div>
           </template>
+
+          <RouterLink
+            v-if="hasDetail(entry.year)"
+            :to="`/spiele/${entry.year}`"
+            class="border-rich-black/30 text-rich-black hover:border-celtic-blue hover:text-celtic-blue mt-1 inline-flex w-fit items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors"
+          >
+            Ergebnisse ansehen
+            <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          </RouterLink>
         </div>
       </article>
     </div>
