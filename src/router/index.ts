@@ -5,7 +5,7 @@ import GalleryPage from '@/pages/GalleryPage.vue'
 import HistoryPage from '@/pages/HistoryPage.vue'
 import ImprintPage from '@/pages/ImprintPage.vue'
 import ClubLanding from '@/pages/LandingPage.vue'
-import MatchesOverviewPage from '@/pages/matches/MatchesOverviewPage.vue'
+import MatchesPage from '@/pages/MatchesPage.vue'
 import MembershipPage from '@/pages/MembershipPage.vue'
 import NewsPage from '@/pages/NewsPage.vue'
 import PrivacyPage from '@/pages/PrivacyPage.vue'
@@ -18,7 +18,7 @@ const router = createRouter({
     { path: '/', name: 'home', component: ClubLanding },
     { path: '/news', name: 'news', component: NewsPage },
     { path: '/historie', name: 'historie', component: HistoryPage },
-    { path: '/spiele', name: 'spiele', component: MatchesOverviewPage },
+    { path: '/spiele', name: 'spiele', component: MatchesPage },
     { path: '/vorstand', name: 'vorstand', component: BoardPage },
     { path: '/training', name: 'training', component: TrainingPage },
     { path: '/mannschaft', name: 'mannschaft', component: TeamPage },

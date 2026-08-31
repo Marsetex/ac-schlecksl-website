@@ -21,19 +21,19 @@ function onYearChange(event: Event): void {
 
 <template>
   <div
-    class="border-pitch-dark/10 flex flex-wrap items-center justify-end gap-4 border-b bg-white px-6 py-4 sm:rounded-t-2xl"
+    class="border-rich-black/10 flex flex-wrap items-center justify-end gap-4 border-b bg-white px-6 py-4 sm:rounded-t-2xl"
   >
     <div class="flex items-center gap-2">
       <label
         for="gallery-year-filter"
-        class="text-pitch-dark/45 text-xs font-semibold tracking-wide uppercase"
+        class="text-rich-black/45 text-xs font-semibold tracking-wide uppercase"
       >
         Jahr
       </label>
       <select
         id="gallery-year-filter"
         :value="selectedYear ?? ''"
-        class="border-pitch-dark/30 text-pitch-dark rounded-md border bg-white py-1.5 pr-2 pl-2.5 text-sm"
+        class="border-rich-black/30 text-rich-black rounded-md border bg-white py-1.5 pr-2 pl-2.5 text-sm"
         @change="onYearChange"
       >
         <option value="">alle Jahre</option>
@@ -43,12 +43,12 @@ function onYearChange(event: Event): void {
 
     <button
       type="button"
-      class="border-pitch-dark/20 text-pitch-dark/70 hover:border-club-blue hover:text-club-blue flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-sm"
+      class="border-rich-black/20 text-rich-black/70 hover:border-celtic-blue hover:text-celtic-blue flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-sm"
       @click="emit('update:sortDescending', !sortDescending)"
     >
       Jahr
       <i :class="sortDescending ? 'ri-arrow-down-line' : 'ri-arrow-up-line'" aria-hidden="true"></i>
-      <span class="text-pitch-dark/45 hidden sm:inline">{{
+      <span class="text-rich-black/45 hidden sm:inline">{{
         sortDescending ? 'neueste zuerst' : 'älteste zuerst'
       }}</span>
     </button>

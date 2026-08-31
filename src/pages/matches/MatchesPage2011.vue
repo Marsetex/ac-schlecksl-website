@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 
 interface Match {
   result: string
@@ -19,35 +18,26 @@ const matches: Match[] = [
 </script>
 
 <template>
-  <div class="bg-chalk flex min-h-screen flex-col font-sans">
-    <NavigationBar />
+  <DefaultPageLayout>
+    <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Ergebnisse 2011</h1>
+    <p class="text-rich-black/80 mt-4 text-[15px] leading-relaxed">
+      1 Großfeldspiel: davon 1 Siege
+    </p>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Ergebnisse 2011</h1>
-      <p class="font-body text-pitch-dark/80 mt-4 text-[15px] leading-relaxed">
-        1 Großfeldspiel: davon 1 Siege
-      </p>
-
-      <div class="mt-8 space-y-6">
-        <article
-          v-for="match in matches"
-          :key="match.result"
-          class="rounded-lg bg-white/70 p-5 shadow-sm sm:p-6"
-        >
-          <p class="font-display text-club-blue font-semibold">{{ match.result }}</p>
-          <p
-            v-if="match.lineup"
-            class="font-body text-pitch-dark/80 mt-2 text-[15px] leading-relaxed"
-          >
-            Aufstellung: {{ match.lineup }}
-          </p>
-          <p v-if="match.scorers" class="font-body text-pitch-dark/80 text-[15px] leading-relaxed">
-            Torschützen: {{ match.scorers }}
-          </p>
-        </article>
-      </div>
-    </main>
-
-    <AppFooter />
-  </div>
+    <div class="mt-8 space-y-6">
+      <article
+        v-for="match in matches"
+        :key="match.result"
+        class="rounded-lg bg-white/70 p-5 shadow-sm sm:p-6"
+      >
+        <p class="text-celtic-blue font-semibold">{{ match.result }}</p>
+        <p v-if="match.lineup" class="text-rich-black/80 mt-2 text-[15px] leading-relaxed">
+          Aufstellung: {{ match.lineup }}
+        </p>
+        <p v-if="match.scorers" class="text-rich-black/80 text-[15px] leading-relaxed">
+          Torschützen: {{ match.scorers }}
+        </p>
+      </article>
+    </div>
+  </DefaultPageLayout>
 </template>

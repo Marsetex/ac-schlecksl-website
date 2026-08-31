@@ -1,32 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
+/* Remix Icon: selbst gehostet über npm-Paket, Vite bündelt die Font-Dateien
+   lokal mit – kein CDN-Request, kein Tracking. Lizenz: Remix Icon License v1.0
+   (siehe node_modules/remixicon/License), Attribution optional. */
+@import 'remixicon/fonts/remixicon.css';
+
 /* Tailwind v4: Theme-Werte werden direkt in CSS definiert statt in einer
-   tailwind.config.js. Aus --color-club-blue etc. generiert Tailwind
-   automatisch die Utilities bg-club-blue, text-club-blue, border-club-blue ...
-   Aus --font-display wird die Utility font-display. */
+   tailwind.config.js. Aus --color-celtic-blue etc. generiert Tailwind
+   automatisch die Utilities bg-celtic-blue, text-celtic-blue, border-celtic-blue ... */
 @theme {
-  --color-club-blue: #29357f;
-  --color-pitch-dark: #16241c;
   --color-grass: #5c8a3a;
   --color-chalk: #f3f1e7;
   --color-gold: #c89b3c;
-
-  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-sans: 'Inter', Helvetica, Arial, sans-serif;
-
-  --color-accent: oklch(0.5 0.19 258);
-  --color-accent-dark: oklch(0.22 0.09 258);
-  --color-accent-light: oklch(0.72 0.14 235);
-
-  /* Eigener Breakpoint fuer den Hero-Umbruch (Text/Buttons), erzeugt die
-     Variante `hero:` ab 720px, analog zur isMobile-Grenze aus dem Design. */
-  --breakpoint-hero: 45rem;
+  --color-rich-black: #000919;
+  --color-oxford-blue: #001d3f;
+  --color-yale-blue: #04356a;
+  --color-polynesian-blue: #054e39;
+  --color-celtic-blue: #0a6ed3;
 }
-
-/* Hinweis: Tailwinds Preflight (in @import "tailwindcss" enthalten) setzt
-   body { margin: 0 } bereits selbst zurück – ein zusätzlicher Reset ist
-   also nicht nötig. */

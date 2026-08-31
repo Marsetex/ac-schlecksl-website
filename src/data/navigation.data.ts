@@ -1,13 +1,4 @@
-export interface NavLink {
-  label: string
-  to: string
-}
-
-export interface NavItem {
-  label: string
-  to?: string
-  children?: NavLink[]
-}
+import type { NavItem } from '@/models/shared/nav-item.model'
 
 export const navigation: NavItem[] = [
   { label: 'Home', to: '/' },

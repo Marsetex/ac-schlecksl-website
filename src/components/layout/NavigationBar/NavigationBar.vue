@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import logo from '@/assets/ac-schlecksl-logo.webp'
-import { navigation } from '@/data/navigation'
+import { navigation } from '@/data/navigation.data.ts'
 import NavDesktopMenu from './NavDesktopMenu.vue'
 import NavMobileMenu from './NavMobileMenu.vue'
 import NavBurgerButton from './NavBurgerButton.vue'
@@ -19,9 +19,8 @@ function closeMobileMenu() {
 
 <template>
   <header class="fixed inset-x-0 top-0 z-20 shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
-    <div class="h-7 bg-black" aria-hidden="true"></div>
-    <div class="bg-oxford-blue h-15">
-      <div class="relative mx-auto flex h-full w-full max-w-3xl items-center gap-8 px-6 sm:px-8">
+    <div class="bg-yale-blue h-20">
+      <div class="relative flex h-full w-full items-center gap-8 px-6 sm:px-8 md:pl-50">
         <NavDesktopMenu :items="navigation" />
         <NavBurgerButton :open="mobileMenuOpen" @toggle="toggleMobileMenu" />
       </div>
@@ -29,10 +28,10 @@ function closeMobileMenu() {
 
     <!-- Vereinslogo: ragt über schwarzen Streifen und blaue Leiste, links neben dem ersten Menüpunkt -->
     <div
-      class="pointer-events-none absolute inset-0 mx-auto flex w-full max-w-3xl items-start px-6 sm:px-8"
+      class="pointer-events-none absolute inset-0 flex w-full items-start px-6 sm:px-8"
       aria-hidden="true"
     >
-      <RouterLink to="/" class="pointer-events-auto shrink-0 md:-ml-40" @click="closeMobileMenu">
+      <RouterLink to="/" class="pointer-events-auto shrink-0" @click="closeMobileMenu">
         <img
           :src="logo"
           alt="AC Schlecksl Vereinslogo"

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 
 interface Match {
   result: string
@@ -70,39 +69,33 @@ const matches: Match[] = [
 </script>
 
 <template>
-  <div class="bg-chalk flex min-h-screen flex-col font-sans">
-    <NavigationBar />
+  <DefaultPageLayout>
+    <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Ergebnisse 2009</h1>
+    <p class="text-rich-black/80 mt-4 text-[15px] leading-relaxed">
+      6 Großfeldspiele: davon 4 Siege und 2 Niederlagen
+    </p>
+    <p class="text-rich-black/80 text-[15px] leading-relaxed">
+      2 Turniere: in der Vorrunde ausgeschieden und 7. Platz
+    </p>
+    <p class="text-rich-black/60 mt-2 text-sm italic">
+      Bilder aus dem Jahr 2009 findest Du auf den Galerien
+    </p>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Ergebnisse 2009</h1>
-      <p class="font-body text-pitch-dark/80 mt-4 text-[15px] leading-relaxed">
-        6 Großfeldspiele: davon 4 Siege und 2 Niederlagen
-      </p>
-      <p class="font-body text-pitch-dark/80 text-[15px] leading-relaxed">
-        2 Turniere: in der Vorrunde ausgeschieden und 7. Platz
-      </p>
-      <p class="font-body text-pitch-dark/60 mt-2 text-sm italic">
-        Bilder aus dem Jahr 2009 findest Du auf den Galerien
-      </p>
-
-      <div class="mt-8 space-y-6">
-        <article
-          v-for="match in matches"
-          :key="match.result"
-          class="rounded-lg bg-white/70 p-5 shadow-sm sm:p-6"
+    <div class="mt-8 space-y-6">
+      <article
+        v-for="match in matches"
+        :key="match.result"
+        class="rounded-lg bg-white/70 p-5 shadow-sm sm:p-6"
+      >
+        <p class="text-celtic-blue font-semibold">{{ match.result }}</p>
+        <p
+          v-for="detail in match.details"
+          :key="detail"
+          class="text-rich-black/80 mt-2 text-[15px] leading-relaxed first:mt-2"
         >
-          <p class="font-display text-club-blue font-semibold">{{ match.result }}</p>
-          <p
-            v-for="detail in match.details"
-            :key="detail"
-            class="font-body text-pitch-dark/80 mt-2 text-[15px] leading-relaxed first:mt-2"
-          >
-            {{ detail }}
-          </p>
-        </article>
-      </div>
-    </main>
-
-    <AppFooter />
-  </div>
+          {{ detail }}
+        </p>
+      </article>
+    </div>
+  </DefaultPageLayout>
 </template>

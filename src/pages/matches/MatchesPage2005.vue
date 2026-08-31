@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import AppFooter from '@/components/layout/AppFooter.vue'
-import NavigationBar from '@/components/layout/NavigationBar.vue'
+import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 
 const tournaments: string[] = [
   'Badenia Cup Pretzschendorf: im Viertelfinale nach 7 Meterschießen ausgeschieden',
@@ -18,44 +17,38 @@ const games: string[] = [
 </script>
 
 <template>
-  <div class="bg-chalk flex min-h-screen flex-col font-sans">
-    <NavigationBar />
+  <DefaultPageLayout>
+    <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Ergebnisse 2005</h1>
+    <p class="text-rich-black/80 mt-4 text-[15px] leading-relaxed">
+      6 Großfeldspiele: davon 3 Siege 1 Unentschieden und 2 Niederlagen
+    </p>
+    <p class="text-rich-black/80 text-[15px] leading-relaxed">
+      2 Turniere: im Viertelfinale ausgeschieden und einmal 1. Platz
+    </p>
+    <p class="text-rich-black/60 mt-2 text-sm italic">
+      Bilder aus dem Jahr 2005 findest Du auf den Galerien
+    </p>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Ergebnisse 2005</h1>
-      <p class="font-body text-pitch-dark/80 mt-4 text-[15px] leading-relaxed">
-        6 Großfeldspiele: davon 3 Siege 1 Unentschieden und 2 Niederlagen
-      </p>
-      <p class="font-body text-pitch-dark/80 text-[15px] leading-relaxed">
-        2 Turniere: im Viertelfinale ausgeschieden und einmal 1. Platz
-      </p>
-      <p class="font-body text-pitch-dark/60 mt-2 text-sm italic">
-        Bilder aus dem Jahr 2005 findest Du auf den Galerien
-      </p>
+    <h2 class="text-celtic-blue mt-10 text-xl font-bold">Turniere 2005</h2>
+    <ul class="mt-4 divide-y divide-celtic-blue/10 rounded-lg bg-white/70 shadow-sm">
+      <li
+        v-for="line in tournaments"
+        :key="line"
+        class="text-rich-black/80 p-4 text-[15px] leading-relaxed"
+      >
+        {{ line }}
+      </li>
+    </ul>
 
-      <h2 class="font-display text-club-blue mt-10 text-xl font-bold">Turniere 2005</h2>
-      <ul class="mt-4 divide-y divide-club-blue/10 rounded-lg bg-white/70 shadow-sm">
-        <li
-          v-for="line in tournaments"
-          :key="line"
-          class="font-body text-pitch-dark/80 p-4 text-[15px] leading-relaxed"
-        >
-          {{ line }}
-        </li>
-      </ul>
-
-      <h2 class="font-display text-club-blue mt-10 text-xl font-bold">Großfeldspiele 2005</h2>
-      <ul class="mt-4 divide-y divide-club-blue/10 rounded-lg bg-white/70 shadow-sm">
-        <li
-          v-for="line in games"
-          :key="line"
-          class="font-body text-pitch-dark/80 p-4 text-[15px] leading-relaxed"
-        >
-          {{ line }}
-        </li>
-      </ul>
-    </main>
-
-    <AppFooter />
-  </div>
+    <h2 class="text-celtic-blue mt-10 text-xl font-bold">Großfeldspiele 2005</h2>
+    <ul class="mt-4 divide-y divide-celtic-blue/10 rounded-lg bg-white/70 shadow-sm">
+      <li
+        v-for="line in games"
+        :key="line"
+        class="text-rich-black/80 p-4 text-[15px] leading-relaxed"
+      >
+        {{ line }}
+      </li>
+    </ul>
+  </DefaultPageLayout>
 </template>

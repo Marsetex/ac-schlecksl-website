@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import FooterMain from '@/components/layout/Footer/FooterMain.vue'
-import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
+import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 
 interface Contact {
   heading: string
@@ -58,70 +57,56 @@ const liabilitySections: LiabilitySection[] = [
 </script>
 
 <template>
-  <div class="bg-chalk flex min-h-screen flex-col font-sans">
-    <NavigationBar />
+  <DefaultPageLayout>
+    <header class="mb-12 text-center">
+      <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Impressum</h1>
+    </header>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <header class="mb-12 text-center">
-        <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Impressum</h1>
-      </header>
-
-      <div class="grid gap-6 sm:grid-cols-2">
-        <article
-          v-for="contact in contacts"
-          :key="contact.heading"
-          class="rounded-lg bg-white/70 p-6 shadow-sm"
+    <div class="grid gap-6 sm:grid-cols-2">
+      <article
+        v-for="contact in contacts"
+        :key="contact.heading"
+        class="rounded-lg bg-white/70 p-6 shadow-sm"
+      >
+        <p class="text-celtic-blue/70 text-sm font-semibold tracking-[0.15em] uppercase">
+          {{ contact.heading }}
+        </p>
+        <h2 class="text-rich-black mt-2 text-xl font-bold">{{ contact.name }}</h2>
+        <p
+          v-for="line in contact.addressLines"
+          :key="line"
+          class="text-rich-black/80 mt-1 text-[15px] leading-relaxed"
         >
-          <p
-            class="font-display text-club-blue/70 text-sm font-semibold tracking-[0.15em] uppercase"
-          >
-            {{ contact.heading }}
+          {{ line }}
+        </p>
+        <p v-if="contact.fon" class="text-rich-black/80 mt-1 text-[15px] leading-relaxed">
+          Fon: {{ contact.fon }}
+        </p>
+        <p v-if="contact.fax" class="text-rich-black/80 mt-1 text-[15px] leading-relaxed">
+          Fax: {{ contact.fax }}
+        </p>
+        <a
+          :href="`mailto:${contact.email}`"
+          class="text-celtic-blue mt-1 block text-[15px] underline"
+        >
+          {{ contact.email }}
+        </a>
+      </article>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-rich-black text-2xl font-bold">Haftungshinweis</h2>
+
+      <div class="mt-6 space-y-8">
+        <article v-for="section in liabilitySections" :key="section.heading">
+          <h3 class="text-rich-black text-lg font-semibold">
+            {{ section.heading }}
+          </h3>
+          <p class="text-rich-black/80 mt-2 text-[15px] leading-relaxed">
+            {{ section.text }}
           </p>
-          <h2 class="font-display text-pitch-dark mt-2 text-xl font-bold">{{ contact.name }}</h2>
-          <p
-            v-for="line in contact.addressLines"
-            :key="line"
-            class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed"
-          >
-            {{ line }}
-          </p>
-          <p
-            v-if="contact.fon"
-            class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed"
-          >
-            Fon: {{ contact.fon }}
-          </p>
-          <p
-            v-if="contact.fax"
-            class="font-body text-pitch-dark/80 mt-1 text-[15px] leading-relaxed"
-          >
-            Fax: {{ contact.fax }}
-          </p>
-          <a
-            :href="`mailto:${contact.email}`"
-            class="text-club-blue mt-1 block text-[15px] underline"
-          >
-            {{ contact.email }}
-          </a>
         </article>
       </div>
-
-      <section class="mt-16">
-        <h2 class="font-display text-pitch-dark text-2xl font-bold">Haftungshinweis</h2>
-
-        <div class="mt-6 space-y-8">
-          <article v-for="section in liabilitySections" :key="section.heading">
-            <h3 class="font-display text-pitch-dark text-lg font-semibold">
-              {{ section.heading }}
-            </h3>
-            <p class="font-body text-pitch-dark/80 mt-2 text-[15px] leading-relaxed">
-              {{ section.text }}
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <FooterMain />
-  </div>
+    </section>
+  </DefaultPageLayout>
 </template>

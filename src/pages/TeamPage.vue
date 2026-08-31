@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import FooterMain from '@/components/layout/Footer/FooterMain.vue'
-import NavigationBar from '@/components/layout/NavigationBar/NavigationBar.vue'
+import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
+import TeamPlayerCard from '@/components/team/TeamPlayerCard.vue'
+import { teamGroups } from '@/data/team.data'
 </script>
 
 <template>
-  <div class="bg-chalk flex min-h-screen flex-col font-sans">
-    <NavigationBar />
+  <DefaultPageLayout>
+    <header class="mb-12">
+      <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Mannschaft</h1>
+    </header>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-6 pt-28 pb-24 sm:px-8">
-      <header class="mb-12">
-        <h1 class="font-display text-pitch-dark text-3xl font-bold sm:text-4xl">Mannschaft</h1>
-        <p class="font-body text-pitch-dark/80 mt-3 text-[15px] leading-relaxed">
-          Diese Seite befindet sich im Aufbau.
-        </p>
-      </header>
-    </main>
+    <section v-for="group in teamGroups" :key="group.heading" class="mb-14 last:mb-0">
+      <h2 class="text-rich-black mb-6 text-2xl font-bold">{{ group.heading }}</h2>
 
-    <FooterMain />
-  </div>
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+        <TeamPlayerCard v-for="player in group.players" :key="player.name" :player="player" />
+      </div>
+    </section>
+  </DefaultPageLayout>
 </template>

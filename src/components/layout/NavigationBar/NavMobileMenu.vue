@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { NavItem } from '@/data/navigation'
+import type { NavItem } from '@/models/shared/nav-item.model'
 import NavChevronIcon from './NavChevronIcon.vue'
 
 interface Props {
@@ -22,7 +22,7 @@ function toggleSubmenu(label: string) {
 </script>
 
 <template>
-  <div class="bg-accent-dark max-h-[calc(100vh-5.5rem)] overflow-y-auto px-6 pb-4 md:hidden">
+  <div class="bg-rich-black max-h-[calc(100vh-5.5rem)] overflow-y-auto px-6 pb-4 md:hidden">
     <nav class="flex flex-col">
       <template v-for="item in items" :key="item.label">
         <RouterLink
