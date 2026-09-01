@@ -30,7 +30,7 @@ defineProps<Props>()
       </p>
 
       <RouterLink
-        to="/fotos"
+        :to="`/fotos/${entry.id}`"
         class="border-rich-black/30 text-rich-black hover:border-celtic-blue hover:text-celtic-blue mt-1 inline-flex w-fit items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors"
       >
         Galerie öffnen

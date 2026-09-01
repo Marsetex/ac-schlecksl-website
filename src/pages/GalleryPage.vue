@@ -46,7 +46,7 @@ const visibleYears = computed(() => {
             </span>
           </div>
 
-          <GalleryEventCard v-for="entry in group.entries" :key="entry.title" :entry="entry" />
+          <GalleryEventCard v-for="entry in group.entries" :key="entry.id" :entry="entry" />
         </section>
       </div>
     </div>
