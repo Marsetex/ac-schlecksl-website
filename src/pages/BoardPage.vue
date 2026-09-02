@@ -1,28 +1,7 @@
 <script lang="ts" setup>
 import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 import { teamLeaders } from '@/data/team-leaders.data'
-
-interface BoardMember {
-  role: string
-  name: string
-  addressLines?: string[]
-}
-
-const boardMembers: BoardMember[] = [
-  {
-    role: 'Vorstand und Geschäftsführer',
-    name: 'Franz Ikker',
-    addressLines: ['Hans-Thoma-Straße 3', '76456 Kuppenheim'],
-  },
-  {
-    role: 'Vorstand',
-    name: 'Klaus Schulz',
-  },
-  {
-    role: 'Öffentlichkeitsarbeit',
-    name: 'Richard Schlick',
-  },
-]
+import { boardMembers } from '@/data/board.data'
 </script>
 
 <template>
