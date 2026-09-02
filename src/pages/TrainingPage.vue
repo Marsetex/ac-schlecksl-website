@@ -3,21 +3,6 @@ import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
 import TrainingSeasonRow from '@/components/training/TrainingSeasonRow.vue'
 import { teamLeaders } from '@/data/team-leaders.data'
 import { trainingSeasons } from '@/data/training-seasons.data'
-import { getNextTrainingDate, getTrainingSeasonFor } from '@/utils/training-schedule'
-
-const nextTrainingDateFormatter = new Intl.DateTimeFormat('de-DE', {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-})
-
-const nextTrainingDate = getNextTrainingDate()
-const nextSeason = trainingSeasons.find(
-  (season) => season.season === getTrainingSeasonFor(nextTrainingDate),
-)!
-
-const nextTrainingLine = `${nextTrainingDateFormatter.format(nextTrainingDate)}, ${nextSeason.time}`
-const nextTrainingPlace = `${nextSeason.venueName} · ${nextSeason.address}`
 </script>
 
 <template>
@@ -30,18 +15,6 @@ const nextTrainingPlace = `${nextSeason.venueName} · ${nextSeason.address}`
         vorbeikommen, Neue sind jederzeit willkommen.
       </p>
     </div>
-
-    <!-- <div class="bg-celtic-blue text-chalk flex items-baseline gap-4 px-8 py-5 sm:px-11">
-      <div class="pt-1 text-[11px] font-semibold tracking-[0.14em] uppercase opacity-70">
-        Nächstes Training
-      </div>
-      <div class="flex-1">
-        <div class="text-2xl leading-tight font-semibold">
-          {{ nextTrainingLine }}
-        </div>
-        <div class="mt-1 text-sm opacity-80">{{ nextTrainingPlace }}</div>
-      </div>
-    </div> -->
 
     <div>
       <TrainingSeasonRow v-for="season in trainingSeasons" :key="season.season" :season="season" />
