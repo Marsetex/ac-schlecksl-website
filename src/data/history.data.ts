@@ -1,21 +1,17 @@
 import type { TimelineEvent } from '@/models/history/timeline-event.model'
-import img1978 from '@/assets/history/1978-anfaenge.jpg'
-import img1979 from '@/assets/history/1979-gruendung.jpg'
-import imgStammtisch from '@/assets/history/stammtisch.jpg'
-import img1986 from '@/assets/history/1986-turnier.jpg'
 
 export const historyEvents: TimelineEvent[] = [
   {
     year: '1978',
     title: 'Die Anfänge',
     text: 'Nach Wehr- und Zivildienst ist im Sommer 1978 plötzlich wieder Zeit für andere Dinge. Es wird Fußball gespielt – auf den Sportplätzen am Kanaldamm, auf dem kleinen Platz am Kriegerdenkmal und manchmal in der Schulsporthalle.',
-    image: img1978,
+    image: '/history/1978-anfaenge.jpg',
   },
   {
     year: '1979',
     title: 'Gründung des Hobbyfußballclubs',
     text: 'Bei der Anneliese im "Engel" wird es offiziell: Ein Hobbyfußballverein soll es werden – nein, ein Club, denn "Jeder nennt sich FC, wir nicht!". Leroy bringt den Namen "Schlecksl" ins Spiel, Andreas ergänzt "AC, so heißt keiner". So wird der Hobbyfußballclub AC Schlecksl geboren, mit dreizehn Gründungsmitgliedern: Klaus R., Franz, Michael J., Pinky, Bernhard, Andreas Sch., Klaus K., Frank, Klaus Sch., Michael R., Charly, Leroy und Andreas H.',
-    image: img1979,
+    image: '/history/1979-gruendung.jpg',
   },
   {
     year: '1983',
@@ -26,7 +22,7 @@ export const historyEvents: TimelineEvent[] = [
     year: '1986',
     title: 'Neue Trainingsheimat & erstes Turnier',
     text: 'Weil die Hartplätze am Kanaldamm einem Industriegebiet weichen müssen, ziehen wir mit dem Training nach Baden-Oos zum dortigen FV um. Im selben Jahr veranstalten wir unser erstes Fußballturnier in der Kuppener Sporthalle.',
-    image: imgStammtisch,
+    image: '/history/stammtisch.jpg',
   },
   {
     year: '1989',
@@ -37,7 +33,7 @@ export const historyEvents: TimelineEvent[] = [
     year: '1990',
     title: 'Restaurant im Wörtel & Turnier-Ära',
     text: 'Im Mai eröffnet das "Restaurant im Wörtel" in Kuppenheim seine Pforten – bis Mai 2000 unser Treffpunkt bei Rolf und Inge. Von 1990 bis 2005 wird das Knöpfle-Classics-Turnier in Zusammenarbeit mit der Sparkasse Gaggenau-Kuppenheim 16 Mal ausgetragen, mit bis zu 48 Mannschaften und Bands wie "Just for Fun", "Vampire\'s Daydream" oder "Late Heroes" vor bis zu 1800 Musikfans im Festzelt.',
-    image: img1986,
+    image: '/history/1986-turnier.jpg',
   },
   {
     year: '1994',

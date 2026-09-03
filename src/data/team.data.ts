@@ -1,69 +1,44 @@
 import type { TeamGroup } from '@/models/team/team-group.model'
-import imgDenisDelic from '@/assets/team/denis-delic.jpg'
-import imgHeinrichEiermann from '@/assets/team/heinrich-eiermann.jpg'
-import imgStephanFunke from '@/assets/team/stephan-funke.jpg'
-import imgHansiHertweck from '@/assets/team/hansi-hertweck.jpg'
-import imgGuenterHirn from '@/assets/team/guenter-hirn.jpg'
-import imgHaraldKolb from '@/assets/team/harald-kolb.jpg'
-import imgJanStemmle from '@/assets/team/jan-stemmle.jpg'
-import imgMatthiasStrolz from '@/assets/team/matthias-strolz.jpg'
-import imgJochenUhrig from '@/assets/team/jochen-uhrig.jpg'
-import imgAlexanderWarth from '@/assets/team/alexander-warth.jpg'
-import imgIngoWarth from '@/assets/team/ingo-warth.jpg'
-import imgRobertWozniak from '@/assets/team/robert-wozniak.jpg'
-import imgFreddyZeich from '@/assets/team/freddy-zeich.gif'
-import imgAlexanderSchikalow from '@/assets/team/alexander-schikalow.jpg'
-import imgSergejSchikalow from '@/assets/team/sergej-schikalow.gif'
-import imgBerndPlaisance from '@/assets/team/bernd-plaisance.jpg'
-import imgKlausReiss from '@/assets/team/klaus-reiss.jpg'
-import imgWilfriedRoesner from '@/assets/team/wilfried-roesner.gif'
-import imgPeterGrohmann from '@/assets/team/peter-grohmann.jpg'
-import imgFranzIkker from '@/assets/team/franz-ikker.jpg'
-import imgDominikJoerger from '@/assets/team/dominik-joerger.jpg'
-import imgAndiStemmle from '@/assets/team/andi-stemmle.jpg'
-import imgDavidEckert from '@/assets/team/david-eckert.jpg'
-import imgMatthiasKuehnle from '@/assets/team/matthias-kuehnle.jpg'
-import imgPatrikHirn from '@/assets/team/patrik-hirn.jpg'
 
 export const teamGroups: TeamGroup[] = [
   {
     heading: 'Aktueller Kader',
     players: [
-      { name: 'Denis Delic', image: imgDenisDelic },
-      { name: 'Heinrich Eiermann', image: imgHeinrichEiermann },
-      { name: 'Stephan Funke', image: imgStephanFunke },
-      { name: 'Hansi Hertweck', image: imgHansiHertweck },
-      { name: 'Günter Hirn', image: imgGuenterHirn },
-      { name: 'Harald Kolb', image: imgHaraldKolb },
-      { name: 'Jan Stemmle', image: imgJanStemmle },
-      { name: 'Matthias Strolz', image: imgMatthiasStrolz },
-      { name: 'Jochen Uhrig', image: imgJochenUhrig },
-      { name: 'Alexander Warth', image: imgAlexanderWarth },
-      { name: 'Ingo Warth', image: imgIngoWarth },
-      { name: 'Robert Wozniak', image: imgRobertWozniak },
-      { name: 'Freddy Zeich', image: imgFreddyZeich },
+      { name: 'Denis Delic', image: '/team-photos/denis-delic.jpg' },
+      { name: 'Heinrich Eiermann', image: '/team-photos/heinrich-eiermann.jpg' },
+      { name: 'Stephan Funke', image: '/team-photos/stephan-funke.jpg' },
+      { name: 'Hansi Hertweck', image: '/team-photos/hansi-hertweck.jpg' },
+      { name: 'Günter Hirn', image: '/team-photos/guenter-hirn.jpg' },
+      { name: 'Harald Kolb', image: '/team-photos/harald-kolb.jpg' },
+      { name: 'Jan Stemmle', image: '/team-photos/jan-stemmle.jpg' },
+      { name: 'Matthias Strolz', image: '/team-photos/matthias-strolz.jpg' },
+      { name: 'Jochen Uhrig', image: '/team-photos/jochen-uhrig.jpg' },
+      { name: 'Alexander Warth', image: '/team-photos/alexander-warth.jpg' },
+      { name: 'Ingo Warth', image: '/team-photos/ingo-warth.jpg' },
+      { name: 'Robert Wozniak', image: '/team-photos/robert-wozniak.jpg' },
+      { name: 'Freddy Zeich', image: '/team-photos/freddy-zeich.gif' },
     ],
   },
   {
     heading: 'Ehemalige',
     players: [
-      { name: 'Alexander Schikalow', image: imgAlexanderSchikalow },
-      { name: 'Sergej Schikalow', image: imgSergejSchikalow },
-      { name: 'Bernd Plaisance', image: imgBerndPlaisance },
-      { name: 'Klaus Reiss', image: imgKlausReiss },
-      { name: 'Wilfried Rösner', image: imgWilfriedRoesner },
-      { name: 'Peter Grohmann', image: imgPeterGrohmann },
-      { name: 'Franz Ikker', image: imgFranzIkker },
+      { name: 'Alexander Schikalow', image: '/team-photos/alexander-schikalow.jpg' },
+      { name: 'Sergej Schikalow', image: '/team-photos/sergej-schikalow.gif' },
+      { name: 'Bernd Plaisance', image: '/team-photos/bernd-plaisance.jpg' },
+      { name: 'Klaus Reiss', image: '/team-photos/klaus-reiss.jpg' },
+      { name: 'Wilfried Rösner', image: '/team-photos/wilfried-roesner.gif' },
+      { name: 'Peter Grohmann', image: '/team-photos/peter-grohmann.jpg' },
+      { name: 'Franz Ikker', image: '/team-photos/franz-ikker.jpg' },
     ],
   },
   {
     heading: '"Legionäre"',
     players: [
-      { name: 'Dominik Jörger', image: imgDominikJoerger },
-      { name: 'Andi Stemmle', image: imgAndiStemmle },
-      { name: 'David Eckert', image: imgDavidEckert },
-      { name: 'Matthias Kühnle', image: imgMatthiasKuehnle },
-      { name: 'Patrik Hirn', image: imgPatrikHirn },
+      { name: 'Dominik Jörger', image: '/team-photos/dominik-joerger.jpg' },
+      { name: 'Andi Stemmle', image: '/team-photos/andi-stemmle.jpg' },
+      { name: 'David Eckert', image: '/team-photos/david-eckert.jpg' },
+      { name: 'Matthias Kühnle', image: '/team-photos/matthias-kuehnle.jpg' },
+      { name: 'Patrik Hirn', image: '/team-photos/patrik-hirn.jpg' },
     ],
   },
 ]
