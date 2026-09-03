@@ -1,7 +1,6 @@
 import type { GalleryYear } from '@/models/gallery/gallery-year.model'
 import type { GalleryEntry } from '@/models/gallery/gallery-entry.model'
-import type { GalleryImage } from '@/models/shared/gallery-image.model'
-import { photos } from '@/data/photos.data'
+import { galleryPhotosByEntryId } from '@/data/gallery-photos.data'
 import imgStadtfest2009 from '@/assets/gallery/2009-stadtfest.jpg'
 import imgPretzschendorf2009 from '@/assets/gallery/2009-pretzschendorf.jpg'
 import imgHuettenwochenende2009 from '@/assets/gallery/2009-huettenwochenende.jpg'
@@ -20,10 +19,8 @@ import imgHelferfest2002 from '@/assets/gallery/2002-helferfest.jpg'
 import imgFasching1999 from '@/assets/gallery/1999-fasching.jpg'
 import imgAlpirsbach from '@/assets/gallery/alpirsbach.jpg'
 
-// Es gibt noch keine echten Fotostrecken pro Galerie-Eintrag, daher wird hier vorübergehend
-// aus dem allgemeinen Fotopool (photos.data.ts) eine wechselnde Auswahl als Platzhalter gezogen.
-function dummyPhotos(offset: number, count = 6): GalleryImage[] {
-  return Array.from({ length: count }, (_, i) => photos[(offset + i) % photos.length]!)
+function entryPhotos(id: string) {
+  return galleryPhotosByEntryId[id] ?? []
 }
 
 export const galleryYears: GalleryYear[] = [
@@ -38,7 +35,7 @@ export const galleryYears: GalleryYear[] = [
           'Auf dem Stadtfest gabs natürlich wieder den AC Schlecksl Klassiker: die XXL Currywurst. Auch diesmal ist keiner dran gestorben. Nur im "Diebsloch" wurden zu später Stunde angeblich ein paar Schnapsleichen gesichtet. Schuld daran war unter Anderem die Premiere der Jaegermeister-Tap Maschine.',
           'Die Jägermeister-Tap Maschine kann man übrigens auch leihen.',
         ],
-        photos: dummyPhotos(0),
+        photos: entryPhotos('stadtfest-2009'),
       },
       {
         id: 'badenia-cup-pretzschendorf-2009',
@@ -47,7 +44,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Auch 2009 fuhren wir Schlecksler in den wilden Osten. Neben den Spielern war diesmal sogar unser Präsi mit dabei. Um ein wenig Bewegung beim Ausflug zu den Schwedenlöchern kam auch er nicht herum.',
         ],
-        photos: dummyPhotos(6),
+        photos: entryPhotos('badenia-cup-pretzschendorf-2009'),
       },
       {
         id: 'huettenwochenende-2009',
@@ -56,7 +53,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'In der Nacht vom 10. zum 11. Mai wurde das 30 jährige Jubiläum mit einer Party eingeleutet. Vorsichtshalber wurde die Übernachtung gleich mitgebucht. Nachdem einige Mitglieder für ihre herausragenden Leistungen hinter Grill und Fritteuse angemessen geehrt wurden, wurde der Abend mit einem Quiz und Live-Musik abgerundet.',
         ],
-        photos: dummyPhotos(12),
+        photos: entryPhotos('huettenwochenende-2009'),
       },
       {
         id: 'maijahrmarkt-2009',
@@ -65,7 +62,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Auf dem Jahrmarkt in Kuppenheim servierte der AC Schlecksl Currywürste, die schon in der kleinen Ausführung XL hießen. Die XXL Currywurst mit Pommes ist nur was für echte Kerle. Acuh wenn der AC Schlecksl ein Hobbyclub ist, sind an Grill und Fritteuse nur Profis am Werk.',
         ],
-        photos: dummyPhotos(18),
+        photos: entryPhotos('maijahrmarkt-2009'),
       },
       {
         id: 'sasbachwalden-ah-2009',
@@ -74,7 +71,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Nach Diskussionen über den Spieluntergrund haben wir unser erstes Heimspiel seit langem doch auswärts in Sasbachwalden bestritten. Trotz langer Anreise haben wir das Spiel mit 4:1 zu unseren Gunsten entscheiden können und starteten somit mit einem Sieg in die Großfeldsaison 2009.',
         ],
-        photos: dummyPhotos(24),
+        photos: entryPhotos('sasbachwalden-ah-2009'),
       },
     ],
   },
@@ -88,7 +85,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           '2008 spielten wir zum ersten mal gegen die Alten Herren von Herxheim. Das Spiel endete 1:1. Der Abend klang mit pfälzer Gemütlichkeit im Vereinsheim aus.',
         ],
-        photos: dummyPhotos(30),
+        photos: entryPhotos('herxheim-ah-2008'),
       },
     ],
   },
@@ -102,7 +99,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Das Spiel gegen Eggenstein endete 1:3 für den AC Schlecksl. Frank Roth kam hier zum kürzesten Einsatz in der Geschichte des AC Schlecksl. Direkt nach dem einlaufen verdrehte er sich das Knie und mußte wieder vom Platz.',
         ],
-        photos: dummyPhotos(36),
+        photos: entryPhotos('eggenstein-2007'),
       },
       {
         id: 'sasbachwalden-ah-2007',
@@ -111,7 +108,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Die Alde Gott Arena ist ein beliebtes Pflaster für den AC Schlecksl. Das Spiel gegen die alten Herren aus Sasbachwalden wurde von Jan Stemmle mit einem Solo direkt zu Beginn des Spiels mit 0:1 entschieden.',
         ],
-        photos: dummyPhotos(42),
+        photos: entryPhotos('sasbachwalden-ah-2007'),
       },
       {
         id: 'stadtfest-kuppenheim-2007',
@@ -120,7 +117,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           '2007 wurde das Stadtfest in Kuppenheim zum ersten mal gefeiert. Der AC Schlecksl war natürlich mit von der Partie. Im "Diebsloch", den vom AC Schlecksl bewirteten Keller, wurde bis in die frühen Morgenstuden gefeiert als ob es kein morgen gibt.',
         ],
-        photos: dummyPhotos(48),
+        photos: entryPhotos('stadtfest-kuppenheim-2007'),
       },
     ],
   },
@@ -134,7 +131,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Nachdem es uns 2005 in Dresden und Pretzschendorf so gut gefallen hat wollten wir natürlich im nächsten Jahr wieder hin. Für den Turniersieg hat es leider nicht gereicht aber dafür haben wir jede Menge interessanter Eindrücke sammeln können. Vor allem auf dem Straßenfest Bunte Republik Neustadt haben wir nicht ganz alltägliche Leute getroffen.',
         ],
-        photos: dummyPhotos(54),
+        photos: entryPhotos('badenia-cup-pretzschendorf-2006'),
       },
     ],
   },
@@ -148,7 +145,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           '2005 fuhr zum ersten mal eine Mannschaft des AC Schlecksl in den wilden Osten. Als Rahmenprogramm rund um die Teilnahme am Badeniacup in Pretzschendorf besuchten wir Dresden und setzten uns beim Straßenfest Bunte Republik Neustadt mit den Einheimischen Sitten und Gebräuchen auseinander.',
         ],
-        photos: dummyPhotos(60),
+        photos: entryPhotos('badeniacup-pretzschendorf-2005'),
       },
       {
         id: 'knoepfle-classics-2005',
@@ -157,7 +154,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           '2005 fand zum letzten mal das Hallenturnier "Knoepfle Classics" statt. Mit einer Materialschlacht aus Hallenturnier, Festzelt und Bands endete die Geschichte des legendären Turniers.',
         ],
-        photos: dummyPhotos(66),
+        photos: entryPhotos('knoepfle-classics-2005'),
       },
     ],
   },
@@ -171,7 +168,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Im Jubiläumsjahr 2004 wurde bei den Knoepfle Classics mal wieder alles gegeben. Zum 25-jährigen kamen auch einige Stars auf die Bühne, zum Beispiel Elvis.',
         ],
-        photos: dummyPhotos(72),
+        photos: entryPhotos('knoepfle-classics-2004'),
       },
     ],
   },
@@ -185,7 +182,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           '2002 wurden mal wieder Kind und Kegel zu einem Ausflug eingepackt. Bevor die Familien was zu Essen und zu trinken bekamen mussten die Männer erst Holz mit primitiven Werkzeugen bearbeiten.',
         ],
-        photos: dummyPhotos(4),
+        photos: entryPhotos('ausflug-2002'),
       },
       {
         id: 'helferfest-2002',
@@ -194,7 +191,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Nach den Strapazen durch die Bewirtung bei verschiedenen Festen gönnen sich die Schlecksler mit einem Helferfest eine Belohnung.',
         ],
-        photos: dummyPhotos(10),
+        photos: entryPhotos('helferfest-2002'),
       },
     ],
   },
@@ -208,7 +205,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Traditionell beginnt das AC Schlecksl Jahr mit dem Treffen am schmutzigen Donnerstag. Nachdem man sich bei Franz im Keller vorbereitet hat gehts in die Wörtelhalle. Wie man nach Hause kommt weiß man nur selbst. Machmal weiß man nicht mal das.',
         ],
-        photos: dummyPhotos(16),
+        photos: entryPhotos('fasching-1999'),
       },
       {
         id: 'alpirsbach',
@@ -217,7 +214,7 @@ export const galleryYears: GalleryYear[] = [
         paragraphs: [
           'Beim Ausflug nach Alpirsbach wurde eine Glasbläserei besichtigt. Die Bilder sind schon so alt, dass man sie garnicht richtig datieren kann...',
         ],
-        photos: dummyPhotos(22),
+        photos: entryPhotos('alpirsbach'),
       },
     ],
   },

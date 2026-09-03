@@ -28,7 +28,6 @@ const router = createRouter({
     { path: '/mitgliedschaft', name: 'mitgliedschaft', component: MembershipPage },
     { path: '/termine', name: 'termine', component: EventsPage },
     { path: '/galerie', name: 'galerie', component: GalleryPage },
-    { path: '/fotos', name: 'fotos', component: PhotosPage },
     { path: '/fotos/:id', name: 'fotos-eintrag', component: PhotosPage },
     { path: '/datenschutz', name: 'datenschutz', component: PrivacyPage },
     { path: '/impressum', name: 'impressum', component: ImprintPage },
