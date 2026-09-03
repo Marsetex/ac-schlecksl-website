@@ -9,6 +9,7 @@ import MatchesPage from '@/pages/MatchesPage.vue'
 import MatchesYearPage from '@/pages/MatchesYearPage.vue'
 import MembershipPage from '@/pages/MembershipPage.vue'
 import NewsPage from '@/pages/NewsPage.vue'
+import NotFoundPage from '@/pages/NotFoundPage.vue'
 import PhotosPage from '@/pages/PhotosPage.vue'
 import PrivacyPage from '@/pages/PrivacyPage.vue'
 import TeamPage from '@/pages/TeamPage.vue'
@@ -31,6 +32,7 @@ const router = createRouter({
     { path: '/fotos/:id', name: 'fotos-eintrag', component: PhotosPage },
     { path: '/datenschutz', name: 'datenschutz', component: PrivacyPage },
     { path: '/impressum', name: 'impressum', component: ImprintPage },
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundPage },
   ],
 })
 
