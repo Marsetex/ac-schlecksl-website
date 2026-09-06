@@ -33,30 +33,14 @@ function turnierWord(count: number): string {
         <span
           class="bg-rich-black/5 inline-flex h-6.5 w-6.5 flex-none items-center justify-center rounded-lg"
         >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
-            <path
-              d="M12 3v3M12 18v3M3 12h3M18 12h3"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+          <i class="ri-football-line text-[15px]" aria-hidden="true"></i>
         </span>
         {{ entry.spiele }} Großfeldspiele
       </div>
 
       <div class="flex flex-wrap gap-2.5">
         <div class="bg-grass/10 flex items-center gap-2 rounded-lg px-3.5 py-2">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M5 13l4 4L19 7"
-              stroke="var(--color-grass)"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <i class="ri-check-line text-grass text-[17px]" aria-hidden="true"></i>
           <span class="text-grass text-base font-bold">{{ entry.siege }}</span>
           <span class="text-grass text-[13px] opacity-85">Siege</span>
         </div>
@@ -65,29 +49,16 @@ function turnierWord(count: number): string {
           v-if="entry.unentschieden > 0"
           class="bg-rich-black/5 flex items-center gap-2 rounded-lg px-3.5 py-2"
         >
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke="currentColor"
-              class="text-rich-black/70"
-              stroke-width="2.5"
-            />
-          </svg>
+          <i
+            class="ri-checkbox-blank-circle-line text-rich-black/70 text-[17px]"
+            aria-hidden="true"
+          ></i>
           <span class="text-rich-black/70 text-base font-bold">{{ entry.unentschieden }}</span>
           <span class="text-rich-black/70 text-[13px] opacity-85">Unentschieden</span>
         </div>
 
         <div class="flex items-center gap-2 rounded-lg bg-red-50 px-3.5 py-2">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M6 6l12 12M18 6L6 18"
-              stroke="#b3392f"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-          </svg>
+          <i class="ri-close-line text-[17px]" style="color: #b3392f" aria-hidden="true"></i>
           <span class="text-base font-bold" style="color: #b3392f">{{ entry.niederlagen }}</span>
           <span class="text-[13px] opacity-85" style="color: #b3392f">Niederlagen</span>
         </div>
@@ -100,26 +71,7 @@ function turnierWord(count: number): string {
           <span
             class="bg-gold/15 inline-flex h-6.5 w-6.5 flex-none items-center justify-center rounded-lg"
           >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M8 3h8v4a4 4 0 01-4 4 4 4 0 01-4-4V3z"
-                stroke="var(--color-gold)"
-                stroke-width="1.8"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 4H5a2 2 0 002 3M16 4h3a2 2 0 01-2 3"
-                stroke="var(--color-gold)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              />
-              <path
-                d="M12 11v3M9 20h6M10 17h4v3h-4z"
-                stroke="var(--color-gold)"
-                stroke-width="1.8"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <i class="ri-trophy-line text-gold text-[15px]" aria-hidden="true"></i>
           </span>
           {{ entry.turniere.length }} {{ turnierWord(entry.turniere.length) }}
         </div>
