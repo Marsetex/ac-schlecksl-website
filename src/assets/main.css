@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+/* Remix Icon: selbst gehostet über npm-Paket, Vite bündelt die Font-Dateien
+   lokal mit – kein CDN-Request, kein Tracking. Lizenz: Remix Icon License v1.0
+   (siehe node_modules/remixicon/License), Attribution optional. */
+@import 'remixicon/fonts/remixicon.css';
+
+/* Tailwind v4: Theme-Werte werden direkt in CSS definiert statt in einer
+   tailwind.config.js. Aus --color-celtic-blue etc. generiert Tailwind
+   automatisch die Utilities bg-celtic-blue, text-celtic-blue, border-celtic-blue ... */
+@theme {
+  --color-grass: #5c8a3a;
+  --color-chalk: #f3f1e7;
+  --color-gold: #c89b3c;
+  --color-rich-black: #000919;
+  --color-oxford-blue: #001d3f;
+  --color-yale-blue: #04356a;
+  --color-polynesian-blue: #054e39;
+  --color-celtic-blue: #0a6ed3;
+}
