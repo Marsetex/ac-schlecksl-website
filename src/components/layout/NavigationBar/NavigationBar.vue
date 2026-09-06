@@ -28,7 +28,7 @@ function closeMobileMenu() {
 
     <!-- Vereinslogo: ragt über schwarzen Streifen und blaue Leiste, links neben dem ersten Menüpunkt -->
     <div
-      class="pointer-events-none absolute inset-0 flex w-full items-start px-6 sm:px-8"
+      class="pointer-events-none absolute inset-0 flex w-full items-start px-6 pt-2 sm:px-8"
       aria-hidden="true"
     >
       <RouterLink to="/" class="pointer-events-auto shrink-0" @click="closeMobileMenu">
@@ -37,7 +37,7 @@ function closeMobileMenu() {
           alt="AC Schlecksl Vereinslogo"
           width="140"
           height="140"
-          class="rounded-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+          class="h-26 w-26 rounded-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] md:h-35 md:w-35"
         />
       </RouterLink>
     </div>

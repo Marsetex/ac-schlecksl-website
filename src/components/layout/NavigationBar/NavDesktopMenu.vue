@@ -33,15 +33,22 @@ defineProps<Props>()
           class="invisible fixed inset-x-0 top-20 opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100"
         >
           <div class="bg-rich-black">
-            <div class="flex items-center gap-8 px-6 py-3 sm:px-8 md:pl-50">
-              <RouterLink
-                v-for="child in item.children"
-                :key="child.label"
-                :to="child.to"
-                class="text-[20px] font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
+            <div class="flex flex-col gap-3 px-6 py-4 sm:px-8 md:pl-50">
+              <span
+                class="text-sm font-bold tracking-wide text-white uppercase underline underline-offset-4"
               >
-                {{ child.label }}
-              </RouterLink>
+                {{ item.label }}
+              </span>
+              <div class="flex items-center gap-8">
+                <RouterLink
+                  v-for="child in item.children"
+                  :key="child.label"
+                  :to="child.to"
+                  class="text-[20px] font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white"
+                >
+                  {{ child.label }}
+                </RouterLink>
+              </div>
             </div>
           </div>
         </div>
