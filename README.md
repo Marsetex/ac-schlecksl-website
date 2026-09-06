@@ -7,7 +7,7 @@ Website des Amateurfußballvereins AC Schlecksl.
 
 ## Voraussetzungen
 
-- Node.js `^22.18.0` oder `>=24.12.0`
+- Node.js `^24.12.0`
 - [pnpm](https://pnpm.io/) als Package Manager
 
 ## Setup
