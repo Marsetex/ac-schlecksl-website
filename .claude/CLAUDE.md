@@ -18,10 +18,13 @@ pnpm preview           # preview a production build locally
 pnpm type-check        # vue-tsc --build (no emit)
 pnpm lint              # run-s: oxlint --fix, then eslint --fix --cache
 pnpm format            # prettier --write --experimental-cli src/
+pnpm test:unit         # vitest (watch mode); pnpm test:unit -- run for a single pass
 ```
 
-There is no test runner configured in this repo (no test script, no Vitest/Jest/Playwright
-dependency) — don't assume one exists.
+Unit tests use **Vitest** (`vitest.config.ts`, merged on top of `vite.config.ts`), run in the
+`node` environment. Test files live next to their subject in a local `specs/` folder, named
+`*.spec.ts` (e.g. `src/utils/specs/event-date.spec.ts`). There is no component-testing or
+E2E setup (no `@vue/test-utils`, Jest, Cypress, or Playwright) — don't assume one exists.
 
 Linting is two-stage: **oxlint** (`.oxlintrc.json`, correctness-category rules only, plugins
 `eslint`/`typescript`/`unicorn`/`oxc`/`vue`) runs first and fast, then **eslint**
@@ -109,7 +112,9 @@ Enforced by the `model-data-guidelines` skill. Types and data are kept strictly 
 Reusable non-component logic (date/schedule formatting, etc.) lives in `src/utils/` as plain typed
 functions — see `event-date.ts` and `training-schedule.ts` for the existing pattern (e.g.
 `training-schedule.ts` computes the next Thursday training session while skipping a hardcoded set
-of Baden-Württemberg public holidays).
+of Baden-Württemberg public holidays). Both have Vitest specs in `src/utils/specs/` covering
+their exported functions — follow that pattern (plain functions, no Vue/DOM dependency, one
+`describe` per exported function) when adding new utils.
 
 ### Styling & theme
 
