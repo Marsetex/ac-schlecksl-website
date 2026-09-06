@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import type { NavItem } from '@/models/shared/nav-item.model'
-import NavChevronIcon from './NavChevronIcon.vue'
 
 interface Props {
   items: NavItem[]
@@ -14,48 +13,71 @@ interface Emits {
 defineProps<Props>()
 const emit = defineEmits<Emits>()
 
-const openSubmenu = ref<string | null>(null)
+const activeItem = ref<NavItem | null>(null)
 
-function toggleSubmenu(label: string) {
-  openSubmenu.value = openSubmenu.value === label ? null : label
+function openSubmenu(item: NavItem) {
+  activeItem.value = item
+}
+
+function closeSubmenu() {
+  activeItem.value = null
 }
 </script>
 
 <template>
-  <div class="bg-rich-black max-h-[calc(100vh-5.5rem)] overflow-y-auto px-6 pb-4 md:hidden">
-    <nav class="flex flex-col pt-6">
-      <template v-for="item in items" :key="item.label">
-        <RouterLink
-          v-if="item.to"
-          :to="item.to"
-          class="py-3 text-[19px] font-extrabold text-white/90"
-          @click="emit('navigate')"
-        >
-          {{ item.label }}
-        </RouterLink>
-
-        <div v-else>
-          <button
-            type="button"
-            class="flex w-full items-center justify-between py-3 text-[19px] font-extrabold text-white/90"
-            @click="toggleSubmenu(item.label)"
+  <div class="bg-rich-black max-h-[calc(100vh-5.5rem)] overflow-hidden px-6 pb-4 md:hidden">
+    <div
+      class="flex w-[200%] transition-transform duration-300 ease-in-out"
+      :class="activeItem ? '-translate-x-1/2' : 'translate-x-0'"
+    >
+      <!-- Hauptmenü -->
+      <nav class="flex w-1/2 shrink-0 flex-col pt-8">
+        <template v-for="item in items" :key="item.label">
+          <RouterLink
+            v-if="item.to"
+            :to="item.to"
+            class="py-3 text-[19px] font-extrabold text-white/90"
+            @click="emit('navigate')"
           >
             {{ item.label }}
-            <NavChevronIcon :open="openSubmenu === item.label" />
+          </RouterLink>
+
+          <button
+            v-else
+            type="button"
+            class="flex w-full items-center justify-between py-3 text-[19px] font-extrabold text-white/90"
+            @click="openSubmenu(item)"
+          >
+            {{ item.label }}
           </button>
-          <div v-if="openSubmenu === item.label" class="flex flex-col pb-3 pl-4">
-            <RouterLink
-              v-for="child in item.children"
-              :key="child.label"
-              :to="child.to"
-              class="py-2 text-[14px] font-medium text-white/80"
-              @click="emit('navigate')"
-            >
-              {{ child.label }}
-            </RouterLink>
-          </div>
+        </template>
+      </nav>
+
+      <!-- Untermenü -->
+      <nav class="flex w-1/2 shrink-0 flex-col pt-8 pl-6">
+        <div class="flex justify-between items-center gap-1 py-3">
+          <p class="text-[19px] font-extrabold underline text-white/90">
+            {{ activeItem?.label }}
+          </p>
+          <button
+            type="button"
+            class="text-[19px] font-semibold text-white/90"
+            @click="closeSubmenu"
+          >
+            <i class="ri-arrow-left-s-line text-xl" aria-hidden="true"></i>
+            Zurück
+          </button>
         </div>
-      </template>
-    </nav>
+        <RouterLink
+          v-for="child in activeItem?.children"
+          :key="child.label"
+          :to="child.to"
+          class="py-2 text-[19px] font-medium text-white/80"
+          @click="emit('navigate')"
+        >
+          {{ child.label }}
+        </RouterLink>
+      </nav>
+    </div>
   </div>
 </template>
