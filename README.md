@@ -2,6 +2,9 @@
 
 Website des Amateurfußballvereins AC Schlecksl.
 
+[![Build](https://github.com/Marsetex/ac-schlecksl-website/actions/workflows/build.yml/badge.svg)](https://github.com/Marsetex/ac-schlecksl-website/actions/workflows/build.yml)
+[![Deploy](https://github.com/Marsetex/ac-schlecksl-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Marsetex/ac-schlecksl-website/actions/workflows/deploy.yml)
+
 ## Voraussetzungen
 
 - Node.js `^22.18.0` oder `>=24.12.0`
