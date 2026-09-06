@@ -49,9 +49,7 @@ describe('event-date', () => {
     })
 
     it('uses the end date to decide the year suffix for multi-day events', () => {
-      const parts = getEventDateParts(
-        makeEvent({ date: '2026-12-30', endDate: '2027-01-02' }),
-      )
+      const parts = getEventDateParts(makeEvent({ date: '2026-12-30', endDate: '2027-01-02' }))
 
       expect(parts.year).toBe(2027)
     })
@@ -67,15 +65,15 @@ describe('event-date', () => {
     })
 
     it('formats a multi-day event as a day range with a single month', () => {
-      expect(
-        formatEventDateLabel(makeEvent({ date: '2026-03-12', endDate: '2026-03-14' })),
-      ).toBe('12.–14. März')
+      expect(formatEventDateLabel(makeEvent({ date: '2026-03-12', endDate: '2026-03-14' }))).toBe(
+        '12.–14. März',
+      )
     })
 
     it('uses the end date year for the suffix on a year-spanning multi-day event', () => {
-      expect(
-        formatEventDateLabel(makeEvent({ date: '2026-12-30', endDate: '2027-01-02' })),
-      ).toBe('30.–2. Januar 2027')
+      expect(formatEventDateLabel(makeEvent({ date: '2026-12-30', endDate: '2027-01-02' }))).toBe(
+        '30.–2. Januar 2027',
+      )
     })
   })
 
