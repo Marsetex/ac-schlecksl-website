@@ -20,9 +20,13 @@ defineProps<Props>()
       {{ line }}
     </p>
 
-    <p v-if="year.note" class="text-rich-black/60 mt-2 text-sm italic">
-      {{ year.note }}
-    </p>
+    <RouterLink
+      v-if="year.note"
+      :to="year.note.to"
+      class="text-celtic-blue mt-2 inline-block text-sm italic underline"
+    >
+      {{ year.note.label }}
+    </RouterLink>
 
     <template v-if="year.tournaments && year.tournaments.length > 0">
       <h2 class="text-celtic-blue mt-10 text-xl font-bold">Turniere {{ year.year }}</h2>
@@ -58,6 +62,13 @@ defineProps<Props>()
         >
           {{ detail }}
         </p>
+        <RouterLink
+          v-if="game.galleryLink"
+          :to="game.galleryLink.to"
+          class="text-celtic-blue mt-2 inline-block text-[15px] font-semibold underline"
+        >
+          {{ game.galleryLink.label }}
+        </RouterLink>
       </article>
     </div>
   </div>

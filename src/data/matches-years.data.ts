@@ -7,7 +7,7 @@ export const matchYears: MatchYear[] = [
       '6 Großfeldspiele: davon 3 Siege 1 Unentschieden und 2 Niederlagen',
       '2 Turniere: im Viertelfinale ausgeschieden und einmal 1. Platz',
     ],
-    note: 'Bilder aus dem Jahr 2005 findest Du auf den Galerien',
+    note: { label: 'Bilder aus dem Jahr 2005 findest Du auf den Galerien', to: '/galerie' },
     tournaments: [
       'Badenia Cup Pretzschendorf: im Viertelfinale nach 7 Meterschießen ausgeschieden',
       'Handballfest Kuppenheim: Turniersieger',
@@ -24,7 +24,7 @@ export const matchYears: MatchYear[] = [
   {
     year: '2006',
     summary: ['5 Großfeldspiele: davon 3 Siege und 2 Unentschieden', '2 Turniere: 4. und 3. Platz'],
-    note: 'Bilder aus dem Jahr 2006 findest Du auf den Galerien',
+    note: { label: 'Bilder aus dem Jahr 2006 findest Du auf den Galerien', to: '/galerie' },
     tournaments: ['Badenia Cup Pretzschendorf: 4. Platz', 'Handballfest Kuppenheim: 3. Platz'],
     games: [
       { result: '08.04. CRK Eggenstein - AC Schlecksl: 1:1' },
@@ -37,7 +37,7 @@ export const matchYears: MatchYear[] = [
   {
     year: '2007',
     summary: ['7 Großfeldspiele: davon 5 Siege 2 Niederlagen', '1 Turnier: 11.Platz'],
-    note: 'Bilder aus dem Jahr 2007 findest Du auf den Galerien',
+    note: { label: 'Bilder aus dem Jahr 2007 findest Du auf den Galerien', to: '/galerie' },
     tournaments: ['Badenia Cup Pretzschendorf: 11. Platz'],
     games: [
       { result: '05.05. CRK Eggenstein - AC Schlecksl: 1:3' },
@@ -55,7 +55,7 @@ export const matchYears: MatchYear[] = [
       '8 Großßfeldspiele: davon 4 Siege, 2 Niederlagen und 2 Unentschieden',
       '1 Turnier: 2.Platz',
     ],
-    note: 'Bilder aus dem Jahr 2008 findest Du auf den Galerien',
+    note: { label: 'Bilder aus dem Jahr 2008 findest Du auf den Galerien', to: '/galerie' },
     tournaments: ['12.07.Kleinfeldturnier Keschte Igel: 2 Platz'],
     games: [
       { result: '10.05. Sportfest Waldprechtsweier: Blau Weiß Malsch - AC Schlecksl: 3:5' },
@@ -74,7 +74,7 @@ export const matchYears: MatchYear[] = [
       '6 Großfeldspiele: davon 4 Siege und 2 Niederlagen',
       '2 Turniere: in der Vorrunde ausgeschieden und 7. Platz',
     ],
-    note: 'Bilder aus dem Jahr 2009 findest Du auf den Galerien',
+    note: { label: 'Bilder aus dem Jahr 2009 findest Du auf den Galerien', to: '/galerie' },
     games: [
       { result: '01.03. Ü 40 Turnier Obertsrot: In der Vorrunde ausgeschieden' },
       {
@@ -83,8 +83,8 @@ export const matchYears: MatchYear[] = [
           'Aufstellung: Dominik Jörger, Andi Stemmle, Alex Warth, Harald Kolb, Jochen Uhrig, David Eckert, Sofian Barkaoui, Matthias Strolz, Jan Stemmle, Stephan Funke, Heinrich Eiermann',
           'Bank: Richard Schlick',
           'Torschützen: Heinrich Eiermann, Matthias Strolz, David Eckert, Jan Stemmle',
-          'Hier gehts zur Galerie',
         ],
+        galleryLink: { label: 'Hier gehts zur Galerie', to: '/fotos/sasbachwalden-ah-2009' },
       },
       {
         result: '13.06. Sportfest Waldprechstweier: Mahlberg Freiolsheim - AC Schlecksl: 2 - 1',
