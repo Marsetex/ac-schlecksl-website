@@ -3,6 +3,7 @@ import type { NewsItem } from '@/models/news/news-item.model'
 export const newsItemData: NewsItem[] = [
   {
     title: 'Keschte Cup 2016',
+    date: '2016-07-23',
     image: '/news/keschte-cup-2016.jpg',
     imageCaption: 'Keschte Cup 2016',
     paragraphs: [
@@ -11,6 +12,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Erneut zweiter Platz bei „Internationalem" Turnier',
+    date: '2014',
     image: '/news/muenchhausen-2014.jpg',
     imageCaption: 'Erneut zweiter Platz bei „Internationalem" Turnier',
     paragraphs: [
@@ -19,6 +21,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Zweiter Platz bei „Internationalem" Turnier',
+    date: '2013',
     image: '/news/muenchhausen.jpg',
     imageCaption: 'Zweiter Platz bei „Internationalem" Turnier',
     paragraphs: [
@@ -27,6 +30,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'AC Schlecksl trotzt Schnee und Eis',
+    date: '2013-01-17',
     image: '/news/schnee-und-eis.jpg',
     imageCaption: 'AC Schlecksl trotzt Schnee und Eis',
     paragraphs: [
@@ -35,12 +39,14 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Frühlingserwachen in Oberweier',
+    date: '2011-04-09',
     paragraphs: [
       'Der AC Schlecksl begann die Saison 2011  mit dem Derby in Oberweier. Am Samstag den 9. April bei strahlendem Sonnenschein und frühlingshaften Temperaturen besiegten die Schlecksler die Keschte Igel klar mit 3:1. In einem sehenswerten Spiel zweier starker Mannschaften ging der AC Schlecksl mit einem gekonnten und frechen direkt verwandelten Eckstoss von Stefan Funke in Führung. Die Schlecksler ließen kaum Chancen der Hausherren zu und erhöhten den Druck im Spielverlauf. Die logische Konsequenz: Das 2:0 durch Sofian Barkaoui. Erst im Nachschuss kamen dann die Gastgeber durch einen Elfmeter wieder ran, bevor Stefan Funke mit dem 3:1 den Sack zumachte.',
     ],
   },
   {
     title: 'Auswärtssieg in Eggenstein',
+    date: '2010-09-25',
     image: '/news/eggenstein-2010.png',
     imageCaption: 'Auswärtssieg in Eggenstein',
     paragraphs: [
@@ -49,6 +55,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Wechsel an der Spitze - Jan Stemmle ist neuer Teamchef',
+    date: '2010',
     image: '/news/teamchef-2010.png',
     imageCaption: 'Jan Stemmle ist neuer Teamchef',
     paragraphs: [
@@ -57,6 +64,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Zweite Halbzeit - AC Schlecksl gratuliert zum 50sten',
+    date: '2010-10-30',
     image: '/news/hans-hertweck-50.png',
     imageCaption: 'Hans Hertweck feierte seinen 50sten',
     paragraphs: [
@@ -65,6 +73,7 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Halbzeit - AC Schlecksl gratuliert zum 50sten',
+    date: '2010-10-04',
     image: '/news/norbert-stemmle-50.jpg',
     imageCaption: 'Norbert Stemmle wurde 50',
     paragraphs: [
@@ -73,53 +82,77 @@ export const newsItemData: NewsItem[] = [
   },
   {
     title: 'Neue Galerien online...',
+    date: '2009',
     image: '/news/pretzschendorf-2009.png',
     imageCaption: 'Ausflug an der Elbe bei Dresden',
     paragraphs: [
       'Auch 2009 fuhren wir Schlecksler wieder nach Pretzschendorf. Diesmal sogar mit Hilfe von Oben: Unser Präsi war diesmal zum ersten mal mit dabei und erklamm mit letzem Einsatz die Schwedenlöcher bei der Bastei an der Elbe.',
-      'Bilder zum Ausflug gibts auf der Galerie.',
+    ],
+    links: [
+      {
+        label: 'Bilder zum Ausflug gibts auf der Galerie',
+        to: '/fotos/badenia-cup-pretzschendorf-2009',
+      },
     ],
   },
   {
     title: 'Mit einem Sieg in die Sommerpause',
+    date: '2009',
     paragraphs: [
       'Fast schon traditionell hat sich der AC Schlecksl auf dem Sportfest in Schluttenbach in die Sommerpause verabschiedet. Das Spiel gegen die Westbombers endete 3 - 1 für den AC Schlecksl. Richard Schlick legte mit einem trickreichen Tor den Grundstein zum verdienten Sieg. Heinrich Eiermann legte kurz darauf zum 2 - 0 nach, bevor er nach einem sehenswerten Solo von Jan Stemmle den Ball aus kurzer Distanz zum 3 - 1 Enstand unter die Latte jagte.',
-      'Mehr Informationen zum Spiel gibts in der Rubrik Spiele.',
+    ],
+    links: [
+      { label: 'Mehr Informationen zum Spiel gibts in der Rubrik Spiele', to: '/spiele/2009' },
     ],
   },
   {
     title: 'AC Schlecksl zurück auf Erfolgsspur',
+    date: '2009',
     paragraphs: [
       'Sowohl beim Spiel gegen Johnson Control auf dem Sportfest in Rauental als auch beim Spiel gegen CRK Eggenstein gab es einen Torhagel. Der AC Schlecksl entschied beide Partien mit 6 - 3 bzw 5 - 1 für sich.',
-      'Mehr Informationen zu den Spielen gibts in der Rubrik Spiele.',
+    ],
+    links: [
+      { label: 'Mehr Informationen zu den Spielen gibts in der Rubrik Spiele', to: '/spiele/2009' },
     ],
   },
   {
     title: 'Schlecksl wird in der Hitze von Waldprechtsweier weich',
+    date: '2009-06-13',
     image: '/news/waldprechtsweier-2009.jpg',
     imageCaption: 'Enttäuschung ins Gesicht geschrieben',
     paragraphs: [
       'Mit genau 11 Leuten spielte der AC Schlecksl am Samstag den 13.06. beim Sportfest in Waldprechtsweier gegen Mahlberg Freiolsheim. Der Gegner begann mit einer jungen Mannschaft druckvoll schaffte es aber nicht in Führung zu gehen. Gegen Ende der ersten Halbzeit wurde der AC Schlecksl stärker, konnte aber ebenfalls kein Tor erzielen. Zu Beginn der 2. Hälfte gelang Mahlberg Freiolsheim die 1-0 Führung nach einer Ecke. Michael Hertweck erzielte durch einen sehenswerten Freistoß den Ausgleich, bevor Freiolsheim durch einen Konter zum 2-1 einnetzen konnte.',
-      'Mehr Informationen zum Spiel gibts in der Rubrik Spiele.',
+    ],
+    links: [
+      { label: 'Mehr Informationen zum Spiel gibts in der Rubrik Spiele', to: '/spiele/2009' },
     ],
   },
   {
     title: 'Hüttenwochenende vom 10.05. - 11.05.',
+    date: '2009-05-10',
     image: '/news/huettenwochenende-2009.jpg',
     imageCaption: 'Gute Laune beim Hüttenwochende vorprogrammiert',
     paragraphs: [
       'In der Nacht vom 10. zum 11. Mai wurde das 30 jährige Jubiläum mit einer Party eingeleutet. Vorsichtshalber wurde die Übernachtung gleich mitgebucht. Nachdem einige Mitglieder für ihre herausragenden Leistungen hinter Grill und Fritteuse angemessen geehrt wurden, wurde der Abend mit einem Quiz und Live-Musik abgerundet.',
-      'Bilder zum Hüttenwochendende gibts auf der Galerie.',
+    ],
+    links: [
+      {
+        label: 'Bilder zum Hüttenwochendende gibts auf der Galerie',
+        to: '/fotos/huettenwochenende-2009',
+      },
     ],
   },
   {
     title: 'Erfolgreicher Start in die Großfeldsaison',
+    date: '2009',
     image: '/news/sasbachwalden-2009.jpg',
     imageCaption: 'Jan Stemmle erzielt das 4-0 gegen Sasbachwalden.',
     paragraphs: [
       'Nachdem der Spielort kurzfristig vom heimischen Hartplatz in Oos in die Alde Gott Arena nach Sasbachwalden verlegt wurde begann das Spiel mit einer Stunde Verspätung. Der AC Schlecksl ging zur Halbzeit mit 3:0 durch Tore von Heinrich Eiermann, Matthias Strolz und David Eckert in Führung. Das Spiel endete nach einem Foulelfmeter für Sasbachwalden und einem Tor durch Jan Stemmle 4:1.',
-      'Mehr Informationen zum Spiel gibts in der Rubrik Spiele.',
-      'Bilder zum Spiel gibts auf der Galerie.',
+    ],
+    links: [
+      { label: 'Mehr Informationen zum Spiel gibts in der Rubrik Spiele', to: '/spiele/2009' },
+      { label: 'Bilder zum Spiel gibts auf der Galerie', to: '/fotos/sasbachwalden-ah-2009' },
     ],
   },
 ]

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
+import NewsArticleCard from '@/components/news/NewsArticleCard.vue'
 import { newsItemData } from '@/data/news.data'
 import { events } from '@/data/events.data'
 import { formatEventDateLabel, getUpcomingEvents } from '@/utils/event-date'
@@ -34,23 +35,8 @@ const upcomingEvents = getUpcomingEvents(events, new Date(), 2)
 
     <div class="text-rich-black mt-8 text-3xl font-bold sm:text-4xl">News</div>
 
-    <div class="mt-12 space-y-12">
-      <article v-for="item in newsItemData" :key="item.title" class="clearfix">
-        <img
-          v-if="item.image"
-          :src="item.image"
-          :alt="item.imageCaption ?? item.title"
-          class="float-left mr-5 mb-2 w-48 rounded object-cover"
-        />
-        <h2 class="text-celtic-blue text-2xl font-bold">{{ item.title }}</h2>
-        <p
-          v-for="paragraph in item.paragraphs"
-          :key="paragraph"
-          class="text-rich-black/80 mt-3 text-[15px] leading-relaxed"
-        >
-          {{ paragraph }}
-        </p>
-      </article>
+    <div class="mt-12 flex flex-col gap-8">
+      <NewsArticleCard v-for="item in newsItemData" :key="item.title" :item="item" />
     </div>
   </DefaultPageLayout>
 </template>
