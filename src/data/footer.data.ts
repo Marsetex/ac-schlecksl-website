@@ -6,6 +6,6 @@ export const footerVereinLinks: NavLink[] = [
 ]
 
 export const footerRechtlichesLinks: NavLink[] = [
-  { label: 'Datenschutz', to: '/datenschutz' },
+  { label: 'Datenschutzerklärung', to: '/datenschutz' },
   { label: 'Impressum', to: '/impressum' },
 ]

@@ -19,6 +19,9 @@ import { contacts, liabilitySections } from '@/data/imprint.data'
           {{ contact.heading }}
         </p>
         <h2 class="text-rich-black mt-2 text-xl font-bold">{{ contact.name }}</h2>
+        <p v-if="contact.representedBy" class="text-rich-black/80 mt-1 text-[15px] leading-relaxed">
+          {{ contact.representedBy }}
+        </p>
         <p
           v-for="line in contact.addressLines"
           :key="line"
