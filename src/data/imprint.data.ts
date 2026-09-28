@@ -19,9 +19,9 @@ export const contacts: Contact[] = [
   },
   {
     heading: '3. Realisierung der Seite',
-    name: 'Matthias Strolz',
-    addressLines: ['Ludwig-Wilhelm-Straße 17', '76131 Karlsruhe'],
-    email: 'matthias.strolz@ac-schlecksl.de',
+    name: 'Marcel Grüßinger',
+    addressLines: ['Ahornstraße 3', '76547 Sinzheim'],
+    email: 'marcel.gruessinger@ac-schlecksl.de',
   },
 ]
 
