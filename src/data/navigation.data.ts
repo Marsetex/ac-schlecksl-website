@@ -20,4 +20,8 @@ export const navigation: NavItem[] = [
       { label: 'Fotogalerie', to: '/galerie' },
     ],
   },
+  {
+    label: 'Schichtplan',
+    to: '/pages/shift-schedule/shift-schedule.php',
+  },
 ]
