@@ -45,7 +45,7 @@ assertion or an explicit guard whenever you index into a collection.
 components in `src/pages/`. Route **paths are German** (`/spiele`, `/mannschaft`,
 `/mitgliedschaft`, `/termine`, `/galerie`, `/fotos`, `/datenschutz`, `/impressum`, ...) while
 **page component filenames are English** (`MatchesPage.vue`, `TeamPage.vue`, `EventsPage.vue`,
-`PrivacyPage.vue`, `ImprintPage.vue`, ...) — keep that split when adding a route.
+`PrivacyPolicyPage.vue`, `ImprintPage.vue`, ...) — keep that split when adding a route.
 Per-season match results are consolidated into a single dynamic route, `/spiele/:year` →
 `MatchesYearPage.vue`, rather than one page component per season. `MatchesYearPage.vue` reads
 `route.params.year`, looks it up in `matchYears` (`src/data/matches-years.data.ts`, typed via

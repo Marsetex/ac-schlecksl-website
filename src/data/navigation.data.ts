@@ -7,17 +7,21 @@ export const navigation: NavItem[] = [
   {
     label: 'Verein',
     children: [
-      { label: 'Vorstand', to: '/vorstand' },
       { label: 'Training', to: '/training' },
+      { label: 'Vorstand', to: '/vorstand' },
       { label: 'Mannschaft', to: '/mannschaft' },
     ],
   },
   {
     label: 'Es war einmal',
     children: [
-      { label: 'Historie', to: '/historie' },
-      { label: 'Spiele', to: '/spiele' },
-      { label: 'Galerie', to: '/galerie' },
+      { label: 'Vereinshistorie', to: '/historie' },
+      { label: 'Spiele & Ergebnisse', to: '/spiele' },
+      { label: 'Fotogalerie', to: '/galerie' },
     ],
+  },
+  {
+    label: 'Schichtplan',
+    to: '/pages/shift-schedule/shift-schedule.php',
   },
 ]

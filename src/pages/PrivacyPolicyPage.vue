@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import DefaultPageLayout from '@/components/layout/DefaultPageLayout.vue'
-import { responsibleParty, privacySections } from '@/data/privacy.data'
+import { responsibleParty, privacySections } from '@/data/privacy-policy.data'
 </script>
 
 <template>
   <DefaultPageLayout>
     <header class="mb-12">
-      <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Datenschutz</h1>
+      <h1 class="text-rich-black text-3xl font-bold sm:text-4xl">Datenschutzerklärung</h1>
     </header>
 
     <article class="rounded-lg bg-white/70 p-6 shadow-sm">
