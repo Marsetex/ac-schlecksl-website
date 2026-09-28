@@ -1,8 +1,8 @@
 import type { YearSummary } from '@/models/matches/year-summary.model'
 
 export const matchesYearSummaries: YearSummary[] = [
-  { year: '2025', spiele: 0, siege: 0, unentschieden: 0, niederlagen: 0, turniere: ['2. Platz'] },
-  { year: '2024', spiele: 0, siege: 0, unentschieden: 0, niederlagen: 0, turniere: ['1. Platz'] },
+  // { year: '2025', spiele: 0, siege: 0, unentschieden: 0, niederlagen: 0, turniere: ['2. Platz'] },
+  // { year: '2024', spiele: 0, siege: 0, unentschieden: 0, niederlagen: 0, turniere: ['1. Platz'] },
   { year: '2011', spiele: 1, siege: 1, unentschieden: 0, niederlagen: 0, turniere: [] },
   { year: '2010', spiele: 3, siege: 3, unentschieden: 0, niederlagen: 0, turniere: [] },
   {
