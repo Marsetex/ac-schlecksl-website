@@ -34,13 +34,20 @@ function closeSubmenu() {
       <nav class="flex w-1/2 shrink-0 flex-col pt-8">
         <template v-for="item in items" :key="item.label">
           <RouterLink
-            v-if="item.to"
+            v-if="item.to && !item.isExternalLink"
             :to="item.to"
             class="py-3 text-[19px] font-extrabold text-white/90"
             @click="emit('navigate')"
           >
             {{ item.label }}
           </RouterLink>
+
+          <a
+            v-else-if="item.to && item.isExternalLink"
+            :href="item.to"
+            class="py-3 text-[19px] font-extrabold text-white/90"
+            >{{ item.label }}</a
+          >
 
           <button
             v-else

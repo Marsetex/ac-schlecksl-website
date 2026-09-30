@@ -13,12 +13,19 @@ defineProps<Props>()
   <nav class="hidden h-full items-center gap-8 md:flex">
     <template v-for="item in items" :key="item.label">
       <RouterLink
-        v-if="item.to"
+        v-if="item.to && !item.isExternalLink"
         :to="item.to"
         class="text-[22px] font-extrabold text-white/90 transition-colors hover:text-white"
       >
         {{ item.label }}
       </RouterLink>
+
+      <a
+        v-else-if="item.to && item.isExternalLink"
+        :href="item.to"
+        class="text-[22px] font-extrabold text-white/90 transition-colors hover:text-white"
+        >{{ item.label }}</a
+      >
 
       <div v-else class="group flex h-full items-center">
         <button
