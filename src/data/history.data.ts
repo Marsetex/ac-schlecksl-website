@@ -5,19 +5,19 @@ export const historyEvents: TimelineEvent[] = [
     year: '1978',
     title: 'Die Zeit ist reif',
     text: 'Die Zeit ist reif im Sommer 1978. Was kann man machen, wenn nach dem Wehr- und Zivildienst auf einmal wieder Zeit für andere Dinge ist? Was kann man tun, wenn die Lehrstelle einen nicht ausfüllt oder man nach der 6. Stunde Mathe völlig down ist? Ohne zu wissen: Was ist "Gameboy", "Playstation", "Internet" oder "Handy"?\n\nEben! Man spielt Fußball. Spielt und spielt, spielt auf den Sportplätzen am Kanaldamm, auf dem kleinen Platz am Kriegerdenkmal und manchmal in der Schulsporthalle. Es wird Winter und es wird Frühling und?',
-    image: '/history/1978-anfaenge.jpg',
+    image: '/media/history/1978-anfaenge.jpg',
   },
   {
     year: '1979',
     title: 'Die Gründung',
     text: 'Wir schreiben das Jahr 1979. Das "Internationale Jahr des Kindes". Margaret Thatcher zieht als Regierungschefin in Londons Downing Street No. 10 ein. John Wayne stirbt 72-jährig in Los Angeles. Die Bundesrepublik feiert den 30. Jahrestag der Verkündung des Grundgesetzes und der HSV wird nach 19 Jahren wieder Deutscher Fußballmeister.\n\nUnd was tut sich bei uns? So unkontrolliert kann es mit dem Kicken nicht weitergehen. Wir müssen uns organisieren.\n\nGesagt getan. Bei der Anneliese im "Engel" ist es dann soweit. Hobbyfußballverein, das ist klar. Aber welchen Namen? Natürlich muß man sich abheben von allen anderen. Deshalb ist schnell klar, daß wir kein Verein, sondern ein Club werden.\n\n"Wir nennen uns einfach Schlecksl". Diese Aussage ist uns überliefert und von den damals Anwesenden bestätigt. Aber wer hatte die Idee? Der Pinky oder der Michael. Nein, es war der Leroy. In feuchtfröhlicher Runde einigt man sich auf Schlecksl. Doch später kommt es dann noch dicker. "Jeder nennt sich FC, wir nicht!" (ebenfalls überliefert) lt. Andreas: "AC, so heißt keiner". Der Name war geboren: Hobbyfußballclub AC Schlecksl\n\nWer war nun alles mit von der Partie? Hier die damalige Aufstellung im "Gasthaus zum Engel": Klaus R., Franz, Michael J., Pinky, Bernhard, Andreas Sch., Klaus K., Frank, Klaus Sch., Michael R., Charly, Leroy, Andreas H.\n\nDer Spielbetrieb kann endlich mit offiziellem Namen fortgesetzt werden. Die ersten Großfeldspiele und Kleinfeldturniere überstehen wir mit wechselnden Erfolgen. In den ersten Jahren trainiert uns der "Halli" aus Oberweier. Solange, bis auch er uns nicht mehr weiterbringt.',
-    image: '/history/1979-gruendung.jpg',
+    image: '/media/history/1979-gruendung.jpg',
   },
   {
     year: '1980',
     title: 'Unser erstes Clubhaus',
     text: 'Freitags, nach dem Training in der Schulsporthalle geht´s geschlossen in den "Ochsen". Ansonsten ist unser erster Treffpunkt bzw. Clubhaus das "Hufeisen" in der Wörtelstraße. Es beginnt alles beim Siegfried. Später kommen Helga und Hans, anschließend der Faxe und die Uschi und Tommy hinzu. Bei jedem Wirt toben wir uns aus und so manche Nacht wird zum Tag umfunktioniert. Nur schade, dass die Frühschicht immer schon um 6 Uhr früh beginnt. Riesenschnitzel, Küstennebel, Soleier, Stechbrett und Dart - das sind schöne Zeiten.',
-    image: '/history/stammtisch.jpg',
+    image: '/media/history/stammtisch.jpg',
   },
   {
     year: '1983',
@@ -28,7 +28,7 @@ export const historyEvents: TimelineEvent[] = [
     year: '1986',
     title: 'Neue Trainingsheimat und erstes Turnier',
     text: 'Nachdem Mitte der achtziger Jahre die Hartplätze am Kanaldamm in Kuppenheim einem Industriegebiet geopfert werden, finden wir 1986 unsere neue Trainingsheimat in Baden-Oos beim dortigen FV.\n\n1986 veranstalten wir unser erstes Fußballturnier in der Kuppener Sporthalle.',
-    image: '/history/1986-turnier.jpg',
+    image: '/media/history/1986-turnier.jpg',
   },
   {
     year: '1989',

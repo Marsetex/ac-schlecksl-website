@@ -7,7 +7,7 @@ export const matchesYearSummaries: YearSummary[] = [
   { year: '2010', spiele: 3, siege: 3, unentschieden: 0, niederlagen: 0, turniere: [] },
   {
     year: '2009',
-    image: '/matches/2009.jpg',
+    image: '/media/matches/2009.jpg',
     spiele: 6,
     siege: 4,
     unentschieden: 0,
@@ -16,7 +16,7 @@ export const matchesYearSummaries: YearSummary[] = [
   },
   {
     year: '2008',
-    image: '/matches/2008.jpg',
+    image: '/media/matches/2008.jpg',
     spiele: 8,
     siege: 4,
     unentschieden: 2,
@@ -25,7 +25,7 @@ export const matchesYearSummaries: YearSummary[] = [
   },
   {
     year: '2007',
-    image: '/matches/2007.jpg',
+    image: '/media/matches/2007.jpg',
     spiele: 7,
     siege: 5,
     unentschieden: 0,
@@ -34,7 +34,7 @@ export const matchesYearSummaries: YearSummary[] = [
   },
   {
     year: '2006',
-    image: '/matches/2006.jpg',
+    image: '/media/matches/2006.jpg',
     spiele: 5,
     siege: 3,
     unentschieden: 2,
@@ -43,7 +43,7 @@ export const matchesYearSummaries: YearSummary[] = [
   },
   {
     year: '2005',
-    image: '/matches/2005.jpg',
+    image: '/media/matches/2005.jpg',
     spiele: 6,
     siege: 3,
     unentschieden: 1,
