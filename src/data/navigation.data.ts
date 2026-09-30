@@ -22,6 +22,7 @@ export const navigation: NavItem[] = [
   },
   {
     label: 'Schichtplan',
-    to: '/pages/shift-schedule/shift-schedule.php',
+    to: 'https://www.ac-schlecksl.de/pages/shift-schedule/shift-schedule.php',
+    isExternalLink: true,
   },
 ]
